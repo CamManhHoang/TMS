@@ -1,7 +1,7 @@
 @if(count($errors) > 0)
     <div class="alert alert-danger">
-        <strong>{{ trans('session.whoops') }}</strong>
-        {{ trans('session.error') }}<br/><br/>
+        <strong>Oops!</strong>
+        Something went wrong:<br/><br/>
         <ul>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
