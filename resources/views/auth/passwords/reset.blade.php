@@ -43,19 +43,19 @@
                         <div class="textbox-wrap">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="icon-envelope icon-color"></i></span>
-                                <input id="password" type="password" class="form-control" name="password_confirmation" placeholder="New Password" required="required">
+                                <input id="password" type="password" class="form-control" name="password_confirmation" placeholder="Mật Khẩu Mới" required="required">
                             </div>
                         </div>
 
                         <div class="textbox-wrap">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="icon-envelope icon-color"></i></span>
-                                <input id="password-confirm" type="password" class="form-control" name="password" placeholder="Confirm Your Password" required="required">
+                                <input id="password-confirm" type="password" class="form-control" name="password" placeholder="Xác Nhận Mật Khẩu Mới" required="required">
                             </div>
                         </div>
 
                         <div class="forget-form-action clearfix">
-                            <button type="submit" class="btn btn-success text-center green-btn">&nbsp;<i class="icon-refresh"></i>&nbsp; {{ trans('auth.reset_password_title') }}</button>
+                            <button type="submit" class="btn btn-success text-center green-btn">&nbsp;<i class="icon-refresh"></i>&nbsp; Reset Mật Khẩu</button>
                         </div>
                     </form>
                 </div>
