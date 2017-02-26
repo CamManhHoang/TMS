@@ -1,7 +1,7 @@
 @if(count($errors) > 0)
     <div class="alert alert-danger">
         <strong>Oops!</strong>
-        Something went wrong:<br/><br/>
+        Đã có lỗi xảy ra:<br/><br/>
         <ul>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+    'failed' => 'Các thông tin bạn điền không khớp với CSDL của chúng tôi.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

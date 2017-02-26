@@ -23,7 +23,7 @@
                         <div class="textbox-wrap">
                             <div class="input-group">
                                 <span class="input-group-addon "><i class="icon-user icon-color"></i></span>
-                                <input type="email" required="required" class="form-control" placeholder="Email của bạn" name="email" value="{{ old('email') }}">
+                                <input type="text" required="required" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}">
                             </div>
                         </div>
 
