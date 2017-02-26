@@ -1,4 +1,5 @@
-INSERT INTO `users` (`login_id`, `password`, `email`) VALUES
+INSERT INTO `users` (`id`, `password`, `email`) VALUES
+(1, 'e10adc3949ba59abbe56e057f20f883e', 'supervisor@vnu.edu.vn'),
 (2, 'e10adc3949ba59abbe56e057f20f883e', 'nnbinh@vnu.edu.vn'),
 (3, 'e10adc3949ba59abbe56e057f20f883e', 'nguyenthanhthuy@vnu.edu.vn'),
 (4, 'e10adc3949ba59abbe56e057f20f883e', 'thoaltp@vnu.edu.vn'),
