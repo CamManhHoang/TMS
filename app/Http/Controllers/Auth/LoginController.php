@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use App\User;
 use Auth;
+use Alert;
 
 class LoginController extends Controller
 {
@@ -44,5 +44,17 @@ class LoginController extends Controller
     public function username()
     {
         return 'username';
+    }
+
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        Alert::success('Login Thành Công');
+
+        return $this->authenticated($request, $this->guard()->user())
+            ?: redirect()->intended($this->redirectPath());
     }
 }

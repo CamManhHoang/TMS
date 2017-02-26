@@ -14,6 +14,7 @@
     <!-- Bootstrap and OneUI CSS framework -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <!-- END Stylesheets -->
 </head>
 <body>
@@ -66,5 +67,7 @@
         App.initHelpers('slick');
     });
 </script>
+<script src="js/sweetalert.min.js"></script>
+@include('sweet::alert')
 </body>
 </html>
