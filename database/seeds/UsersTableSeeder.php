@@ -24,7 +24,10 @@ class UsersTableSeeder extends Seeder
         $teacher->description  = 'Giảng Viên có một số quyền nhất định'; // optional
         $teacher->save();
 
-        $user = User::where('username', '=', 'supervisor')->first();
-        $user->attachRole($supervisor);
+        $sv = User::where('username', '=', 'supervisor')->first();
+        $sv->attachRole($supervisor);
+
+        $gv = User::where('username', '=', 'giangvien')->first();
+        $gv->attachRole($teacher);
     }
 }
