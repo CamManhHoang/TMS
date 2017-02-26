@@ -53,7 +53,7 @@ class LoginController extends Controller
 
         $this->clearLoginAttempts($request);
 
-        Alert::success('Login Thành Công');
+        Alert::success('Đăng Nhập Thành Công');
 
         return $this->authenticated($request, $this->guard()->user())
             ?: redirect()->intended($this->redirectPath());
