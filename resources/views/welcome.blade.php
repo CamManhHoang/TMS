@@ -69,8 +69,7 @@
                                 </li>
                                 @if ( Auth::check())
                                     <li>
-                                        <a href="{{ route('logout') }}">Đăng xuất
-                                        </a>
+                                        <a href="{{ route('logout') }}">Đăng xuất</a>
                                     </li>
                                 @endif
                             </ul>
@@ -95,7 +94,11 @@
                     <div class="push-150-t push-50 text-center">
                         <h1 class="h2 text-white push-10 visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">Hệ thống quản lý khóa luận tốt nghiệp TMS.</h1>
                         <h2 class="h4 text-white-op push visibility-hidden" data-toggle="appear" data-class="animated fadeInDown">TMS là công cụ hỗ trợ đắc lực sinh viên và nhà trường trong quá trình xây dựng khóa luận tốt nghiệp.</h2>
-                        <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated zoomIn" href="/login">Đăng Nhập</a>
+                        @if (Auth::guest())
+                            <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated zoomIn" href="/login">Đăng Nhập</a>
+                        @else
+                            <a class="btn btn-rounded btn-noborder btn-lg btn-success visibility-hidden" data-toggle="appear" data-class="animated zoomIn" href="{{ route('logout') }}">Đăng Xuất</a>
+                        @endif
                     </div>
                     <!-- END Section Content -->
                 </section>
