@@ -7,7 +7,7 @@
             <button class="btn btn-default pull-right" type="button" data-toggle="layout" data-action="side_overlay_close">
                 <i class="fa fa-times"></i>
             </button>
-            <span class="font-w600">John Parker</span>
+            <span class="font-w600">{{ Auth::user()->student->full_name}}</span>
         </div>
         <!-- END Side Header -->
 
@@ -21,44 +21,55 @@
                             <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
                         </li>
                     </ul>
-                    <h3 class="block-title">Account</h3>
+                    <h3 class="block-title">Tài khoản</h3>
                 </div>
                 <div class="block-content">
-                    <form class="form-horizontal" action="bd_dashboard.html" method="post" onsubmit="return false;">
+                    <form class="form-horizontal" action="" method="post" onsubmit="return false;">
                         <div class="form-group">
-                            <div class="col-xs-12">
+                            <div class="col-xs-6">
                                 <label>Username</label>
-                                <div class="form-control-static font-w700">johnpar</div>
+                                <div class="form-control-static font-w700">{{ Auth::user()->username }}</div>
+                            </div>
+                            <div class="col-xs-6">
+                                <label>Mã số sinh viên</label>
+                                <div class="form-control-static font-w700">{{ Auth::user()->student->student_id }}</div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <label for="bd-qsettings-name">Name</label>
-                                <input class="form-control" type="text" id="bd-qsettings-name" name="bd-qsettings-name" placeholder="Enter your name.." value="John Parker">
+                                <a class="btn btn-sm btn-minw btn-rounded btn-primary" href="{{ route('logout') }}">
+                                    <i class="fa fa-sign-out"></i> Đăng Xuất
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label for="bd-qsettings-name">Họ và Tên</label>
+                                <input class="form-control" type="text" id="bd-qsettings-name" name="full_name" placeholder="Enter your name.." value="{{ Auth::user()->student->full_name }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <label for="bd-qsettings-email">Email</label>
-                                <input class="form-control" type="email" id="bd-qsettings-email" name="bd-qsettings-email" placeholder="Enter your email.." value="john.parker@example.com">
+                                <input class="form-control" type="email" id="bd-qsettings-email" name="email" placeholder="Enter your email.." value="{{ Auth::user()->student->email }}">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <label for="bd-qsettings-password">New Password</label>
-                                <input class="form-control" type="password" id="bd-qsettings-password" name="bd-qsettings-new-password" placeholder="Enter a new password..">
+                                <label for="bd-qsettings-password">Mật Khẩu Mới</label>
+                                <input class="form-control" type="password" id="bd-qsettings-password" name="password" placeholder="Enter a new password..">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <label for="bd-qsettings-password2">Confirm New Password</label>
-                                <input class="form-control" type="password" id="bd-qsettings-password2" name="bd-qsettings-new-password2" placeholder="Confirm your new password..">
+                                <label for="bd-qsettings-password2">Xác Nhận Mật Khẩu Mới</label>
+                                <input class="form-control" type="password" id="bd-qsettings-password2" name="password-confirmation" placeholder="Confirm your new password..">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <button class="btn btn-sm btn-minw btn-rounded btn-primary" type="submit">
-                                    <i class="fa fa-check push-5-r"></i>Update
+                                    <i class="fa fa-check push-5-r"></i>Cập Nhật
                                 </button>
                             </div>
                         </div>
@@ -75,11 +86,11 @@
                             <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
                         </li>
                     </ul>
-                    <h3 class="block-title">Quick Settings</h3>
+                    <h3 class="block-title">Thiết lập nhanh</h3>
                 </div>
                 <div class="block-content">
                     <!-- Quick Settings Form -->
-                    <form class="form-bordered" action="base_pages_dashboard.html" method="post" onsubmit="return false;">
+                    <form class="form-bordered" action="" method="post" onsubmit="return false;">
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-xs-8">
