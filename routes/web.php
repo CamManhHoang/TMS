@@ -1,6 +1,13 @@
 <?php
 
 Route::get('/', function () {
+    if (Auth::check()) {
+        if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('teacher')) {
+            return redirect('/dashboard');
+        } else {
+            return redirect('/home');
+        }
+    }
     return view('welcome');
 });
 
