@@ -12,11 +12,11 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $supervisor = new \App\Role();
-        $supervisor->name = 'supervisor';
-        $supervisor->display_name = 'Supervisor'; // optional
-        $supervisor->description  = 'Supervisor là người có quyền quản trị cao nhất'; // optional
-        $supervisor->save();
+        $admin = new \App\Role();
+        $admin->name = 'admin';
+        $admin->display_name = 'admin'; // optional
+        $admin->description  = 'admin là người có quyền quản trị cao nhất'; // optional
+        $admin->save();
 
         $teacher = new \App\Role();
         $teacher->name = 'teacher';
@@ -24,8 +24,8 @@ class UsersTableSeeder extends Seeder
         $teacher->description  = 'Giảng Viên có một số quyền nhất định'; // optional
         $teacher->save();
 
-        $sv = User::where('username', '=', 'supervisor')->first();
-        $sv->attachRole($supervisor);
+        $ad = User::where('username', '=', 'admin')->first();
+        $ad->attachRole($admin);
 
         $gv = User::where('username', '=', 'giangvien')->first();
         $gv->attachRole($teacher);

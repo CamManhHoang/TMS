@@ -12,7 +12,7 @@ Route::get('/register', function () {
 });
 
 // Dashboard Management
-Route::group(['middleware' => ['auth', 'role:supervisor|teacher']], function() {
+Route::group(['middleware' => ['auth', 'role:admin|teacher']], function() {
     Route::get('/dashboard', function () {
         return view('dashboard.home');
     });

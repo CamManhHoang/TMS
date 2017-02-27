@@ -31,6 +31,6 @@ class User extends Authenticatable
 
     public function is_student()
     {
-        return !$this->hasRole('supervisor') && !$this->hasRole('teacher');
+        return !$this->hasRole('admin') && !$this->hasRole('teacher');
     }
 }
