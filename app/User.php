@@ -29,16 +29,35 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * Determine if user is a student
+     * @return bool
+     */
     public function is_student()
     {
-        return !$this->hasRole('admin') && !$this->hasRole('teacher');
+        return $this->student !== null;
     }
 
+    /**
+     * Determine if user is a teacher
+     * @return bool
+     */
+    public function is_teacher()
+    {
+        return $this->teacher !== null;
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function student()
     {
         return $this->hasOne(Student::class);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function teacher()
     {
         return $this->hasOne(Teacher::class);
