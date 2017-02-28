@@ -57,6 +57,15 @@ class User extends Authenticatable
     }
 
     /**
+     * Determine if user can access dashboard.
+     * @return bool
+     */
+    public function can_go_dashboard()
+    {
+        return $this->is_admin() || $this->is_teacher();
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function student()

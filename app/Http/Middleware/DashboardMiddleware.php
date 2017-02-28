@@ -27,7 +27,7 @@ class DashboardMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->user()->is_admin() || $this->auth->user()->is_teacher()) {
+        if ($this->auth->user()->can_go_dashboard()) {
             return $next($request);
         }
 
