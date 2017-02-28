@@ -27,7 +27,7 @@ class LoginController extends Controller
     public function redirectPath()
     {
         $user = Auth::user();
-        if ($user->hasRole('admin') || $user->hasRole('teacher')) {
+        if ($user->is_admin() || $user->is_teacher()) {
             return '/dashboard';
         } else {
             return '/home';

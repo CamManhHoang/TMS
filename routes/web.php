@@ -2,7 +2,7 @@
 
 Route::get('/', function () {
     if (Auth::check()) {
-        if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('teacher')) {
+        if (Auth::user()->is_admin() || Auth::user()->is_teacher()) {
             return redirect('/dashboard');
         } else {
             return redirect('/home');
@@ -19,7 +19,7 @@ Route::get('/register', function () {
 });
 
 // Dashboard Management
-Route::group(['middleware' => ['auth', 'role:admin|teacher']], function() {
+Route::group(['middleware' => ['auth', 'dashboard']], function() {
     Route::get('/dashboard', function () {
         return view('dashboard.home');
     });

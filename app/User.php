@@ -48,6 +48,15 @@ class User extends Authenticatable
     }
 
     /**
+     * Determine if user is admin.
+     * @return mixed
+     */
+    public function is_admin()
+    {
+        return $this->is_admin;
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function student()

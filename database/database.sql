@@ -2821,8 +2821,7 @@ INSERT INTO `users` (`id`, `password`, `email`) VALUES
 (2823, 'e10adc3949ba59abbe56e057f20f883e', 'tieudc_58@vnu.edu.vn'),
 (2824, 'e10adc3949ba59abbe56e057f20f883e', 'tungnt_580@vnu.edu.vn'),
 (2825, 'e10adc3949ba59abbe56e057f20f883e', 'thanhvtp@vnu.edu.vn'),
-(2826, 'e10adc3949ba59abbe56e057f20f883e', 'dangph@vnu.edu.vn'),
-(2827, 'e10adc3949ba59abbe56e057f20f883e', 'giangvien@vnu.edu.vn')
+(2826, 'e10adc3949ba59abbe56e057f20f883e', 'dangph@vnu.edu.vn')
 ;
 UPDATE users SET username = SUBSTRING_INDEX(email, '@', 1);
 
