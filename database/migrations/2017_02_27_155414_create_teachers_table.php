@@ -19,6 +19,7 @@ class CreateTeachersTable extends Migration
             $table->string('email');
             $table->string('full_name');
             $table->text('unit_id')->nullable();
+            $table->integer('department_id')->unsigned();
             $table->string('description')->nullable();
             $table->integer('position')->nullable();
             $table->timestamps();
