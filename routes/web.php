@@ -30,4 +30,5 @@ Route::group(['middleware' => ['auth', 'student']], function() {
     Route::get('/home', function () {
         return view('student.home');
     });
+    Route::get('/topic-registration', 'Student\TopicController@index');
 });

@@ -19,4 +19,9 @@ class Teacher extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }

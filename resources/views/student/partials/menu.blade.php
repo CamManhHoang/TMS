@@ -9,47 +9,30 @@
 <div class="bg-primary-lighter collapse navbar-collapse remove-padding" id="sub-header-nav">
     <div class="content-mini content-boxed">
         <ul class="nav nav-pills nav-sub-header push">
-            <li class="active">
-                <a href="bd_dashboard.html">
-                    <i class="fa fa-dashboard push-5-r"></i>Dashboard
+            <li class="{{ Request::is('home') ? 'active' : '' }}">
+                <a href="/home">
+                    <i class="fa fa-university push-5-r"></i>Trang tổng quan
                 </a>
             </li>
-            <li>
-                <a href="bd_products.html">
-                    <i class="fa fa-briefcase push-5-r"></i>Products
+            <li class="{{ Request::is('topic-registration') ? 'active' : '' }}">
+                <a href="/topic-registration">
+                    <i class="fa fa-briefcase push-5-r"></i>Đăng ký đề tài
                 </a>
             </li>
-            <li>
-                <a href="bd_customers.html">
-                    <i class="fa fa-users push-5-r"></i>Customers
+            <li class="{{ Request::is('topic-modification') ? 'active' : '' }}">
+                <a href="/topic-modification">
+                    <i class="fa fa-book push-5-r"></i>Sửa đổi đề tài
                 </a>
             </li>
-            <li>
-                <a href="bd_sales.html">
-                    <i class="fa fa-paypal push-5-r"></i>Sales
+            <li class="{{ Request::is('teachers-info') ? 'active' : '' }}">
+                <a href="/teachers-info">
+                    <i class="fa fa-users push-5-r"></i>Thông tin giảng viên
                 </a>
             </li>
-            <li>
-                <a href="bd_settings.html">
-                    <i class="fa fa-cog push-5-r"></i>Settings
+            <li class="{{ Request::is('settings') ? 'active' : '' }}">
+                <a href="/settings">
+                    <i class="fa fa-cog push-5-r"></i>Cài đặt
                 </a>
-            </li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-coffee push-5-r"></i>More <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="javascript:void(0)">Payment</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">Privacy</a>
-                    </li>
-                    <li role="separator" class="divider"></li>
-                    <li>
-                        <a href="javascript:void(0)">Shop</a>
-                    </li>
-                </ul>
             </li>
         </ul>
     </div>

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" id="css-main" href="css/custom.css">
 </head>
 <body>
 <div id="page-container" class="sidebar-l side-scroll header-navbar-fixed">
@@ -45,6 +47,8 @@
 <script src="assets/js/core/jquery.countTo.min.js"></script>
 <script src="assets/js/core/jquery.placeholder.min.js"></script>
 <script src="assets/js/core/js.cookie.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
 <script src="assets/js/app.js"></script>
 
 <!-- Page JS Code -->
@@ -52,6 +56,7 @@
     jQuery(function () {
         // Init page helpers (Appear plugin)
         App.initHelpers('appear');
+        $('#all-topics').DataTable();
     });
 </script>
 </body>

@@ -19,4 +19,9 @@ class Student extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    public function topic()
+    {
+        return $this->belongsTo(Topic::class);
+    }
 }
