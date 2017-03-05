@@ -56,7 +56,16 @@
     jQuery(function () {
         // Init page helpers (Appear plugin)
         App.initHelpers('appear');
-        $('#all-topics').DataTable();
+        $('#all-topics').DataTable({
+            "language": {
+                "lengthMenu": "Hiển thị _MENU_ bản ghi trên mỗi trang",
+                "search": "Tìm kiếm",
+                "zeroRecords": "Rất tiếc - Không có kết quả nào",
+                "info": "Hiển thị trang _PAGE_/_PAGES_",
+                "infoEmpty": "Không có bản ghi nào được tìm thấy",
+                "infoFiltered": "(Lọc trên tổng số _MAX_ bản ghi)"
+            }
+        });
     });
 </script>
 </body>
