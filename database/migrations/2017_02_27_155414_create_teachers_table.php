@@ -33,8 +33,6 @@ class CreateTeachersTable extends Migration
      */
     public function down()
     {
-        Schema::table('teachers', function (Blueprint $table) {
-            Schema::dropIfExists('teachers');
-        });
+        Schema::dropIfExists('teachers');
     }
 }
