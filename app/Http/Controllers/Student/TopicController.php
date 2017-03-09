@@ -20,7 +20,7 @@ class TopicController extends Controller
     {
         $topic_number = Auth::user()->student->topics()->count();
 
-        if ($topic_number > 3) {
+        if ($topic_number >= 3) {
             Alert::error('Bạn chỉ được đăng ký tối đa 3 đề tài.', 'Có lỗi xảy ra')->autoclose(1500);
             return back();
         } else {
