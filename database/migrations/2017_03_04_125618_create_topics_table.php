@@ -18,6 +18,7 @@ class CreateTopicsTable extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->integer('teacher_id')->unsigned();
+            $table->integer('student_id')->unsigned();
             $table->boolean('docs_status')->default(false);
             $table->boolean('approve')->default(false);
             $table->timestamps();

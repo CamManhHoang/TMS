@@ -28,5 +28,6 @@ $factory->define(App\Topic::class, function (Faker\Generator $faker) {
         'name' => $faker->sentence($nbWords = 6, $variableNbWords = true),
         'description' => $faker->text($maxNbChars = 300),
         'teacher_id' => $faker->numberBetween($min = 2, $max = 201),
+        'student_id' => 0,
     ];
 });

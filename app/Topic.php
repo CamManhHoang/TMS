@@ -23,22 +23,37 @@ class Topic extends Model
 
     public function student()
     {
-        return $this->hasOne(Student::class);
+        return $this->belongsTo(Student::class);
+    }
+
+    public function topic_available()
+    {
+        return $this->student == null || ($this->student != null && $this->approve == 0);
+    }
+
+    public function topic_pending()
+    {
+        return $this->student != null && $this->approve == 0 && $this->student_id == Auth::user()->student->id;
+    }
+
+    public function topic_not_available()
+    {
+        return $this->student != null && $this->approve == 1;
     }
 
     public function status()
     {
-        if ($this->student == null) {
+        if ($this->topic_pending()) {
             echo ''?>
-            <span class="label label-success">Available</span>
+            <span class="label label-primary">Pending</span>
             <?php
-        } else if ($this->student != null && $this->student->id == Auth::user()->student->id ) {
-            echo ''?>
-            <span class="label label-primary">Approved</span>
-            <?php
-        } else if ($this->student != null) {
+        } else if ($this->topic_not_available()) {
             echo ''?>
             <span class="label label-danger">Not Available</span>
+            <?php
+        } else if ($this->topic_available()) {
+            echo ''?>
+            <span class="label label-success">Available</span>
             <?php
         }
     }

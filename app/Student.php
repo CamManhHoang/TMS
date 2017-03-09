@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Auth;
 
 class Student extends Model
 {
@@ -20,8 +21,13 @@ class Student extends Model
         return $this->hasOne(User::class);
     }
 
-    public function topic()
+    public function topics()
     {
-        return $this->belongsTo(Topic::class);
+        return $this->hasMany(Topic::class);
+    }
+
+    public function topic_approved()
+    {
+        return Auth::user()->student->topics->contains('approve', 1);
     }
 }
