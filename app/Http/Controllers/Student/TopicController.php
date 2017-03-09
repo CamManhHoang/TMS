@@ -21,14 +21,14 @@ class TopicController extends Controller
         $topic_number = Auth::user()->student->topics()->count();
 
         if ($topic_number > 3) {
-            Alert::error('Bạn chỉ được đăng ký tối đa 3 đề tài.', 'Có lỗi xảy ra')->autoclose(3500);
+            Alert::error('Bạn chỉ được đăng ký tối đa 3 đề tài.', 'Có lỗi xảy ra')->autoclose(1500);
             return back();
         } else {
             $topic = Topic::findOrFail($id);
             $topic->student_id = Auth::user()->student->id;
             $topic->save();
 
-            Alert::success('Chúng tôi sẽ gửi email cho bạn ngay khi đề tài bạn đăng ký được chấp nhận.', 'Đăng ký thành công')->autoclose(3500);
+            Alert::success('Chúng tôi sẽ gửi email cho bạn ngay khi đề tài bạn đăng ký được chấp nhận.', 'Đăng ký thành công')->autoclose(2500);
             return back();
         }
     }
