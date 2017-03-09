@@ -31,4 +31,5 @@ Route::group(['middleware' => ['auth', 'student']], function() {
         return view('student.home');
     });
     Route::get('/topic-registration', 'Student\TopicController@index');
+    Route::put('/topic-register/{id}', 'Student\TopicController@register_topic')->name('register-topic');
 });

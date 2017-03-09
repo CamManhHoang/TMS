@@ -39,9 +39,14 @@
                                 <td>{{ $topic->status() }}</td>
                                 <td>
                                     @if ($topic->topic_available() && !$topic->topic_pending())
-                                        <button class="btn btn-sm btn-square btn-success" data-toggle="modal" data-target="#modal-fadein" type="button">
-                                            <i class="fa fa-check"></i> Đăng ký
-                                        </button>
+                                        {{ Form::open(['method' => 'PUT', 'route'=>['register-topic', $topic->id]]) }}
+                                            {{ Form::button('<i class="fa fa fa-check"></i> ' . 'Đăng ký', [
+                                                'type' => 'submit',
+                                                'class' => 'btn btn-sm btn-square btn-success',
+                                                'onclick' => "return confirm('Bạn có chắc chắc muốn đăng ký đề tài này?')"
+                                                ])
+                                            }}
+                                        {{ Form::close() }}
                                     @endif
                                 </td>
                             </tr>
@@ -51,33 +56,4 @@
             </div>
         @endif
     </div>
-
-    <!-- Fade In Modal -->
-    <div class="modal fade" id="modal-fadein" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="block block-themed block-transparent remove-margin-b">
-                    <div class="block-header bg-primary-dark">
-                        <ul class="block-options">
-                            <li>
-                                <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
-                            </li>
-                        </ul>
-                        <h3 class="block-title">Xác nhận đăng ký đề tài</h3>
-                    </div>
-                    <div class="block-content">
-                        <p>Bạn có chắc chắn muốn đăng ký đề tài khóa luận này?
-                        Lưu ý rằng sau khi xác nhận thì đề tài của bạn sẽ cần phải nhận được sự đồng ý từ phía giảng viên cố vấn.
-                        Chúng tôi sẽ thông báo cho bạn ngay khi đề tài của bạn được chấp nhận.</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
-                    <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Ok</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Fade In Modal -->
-
 @endsection

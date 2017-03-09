@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
     <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" id="css-main" href="css/custom.css">
 </head>
 <body>
@@ -39,6 +40,7 @@
 <!-- END Page Container -->
 
 <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+@yield('script')
 <script src="assets/js/core/jquery.min.js"></script>
 <script src="assets/js/core/bootstrap.min.js"></script>
 <script src="assets/js/core/jquery.slimscroll.min.js"></script>
@@ -68,5 +70,7 @@
         });
     });
 </script>
+<script src="js/sweetalert.min.js"></script>
+@include('sweet::alert')
 </body>
 </html>
