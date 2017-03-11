@@ -21,7 +21,7 @@ class CreateTeachersTable extends Migration
             $table->text('unit_id')->nullable();
             $table->integer('department_id')->unsigned();
             $table->string('description')->nullable();
-            $table->integer('position')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
         });
     }

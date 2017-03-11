@@ -14,7 +14,7 @@
                 <div class="block-content">
                     <div class="row text-center">
                         <div class="col-xs-6">
-                            <a class="block block-rounded" href="base_pages_dashboard.html">
+                            <a class="block block-rounded" href="/dashboard">
                                 <div class="block-content text-white bg-default">
                                     <i class="si si-speedometer fa-2x"></i>
                                     <div class="font-w600 push-15-t push-15">Backend</div>
@@ -22,7 +22,7 @@
                             </a>
                         </div>
                         <div class="col-xs-6">
-                            <a class="block block-rounded" href="frontend_home.html">
+                            <a class="block block-rounded" href="#">
                                 <div class="block-content text-white bg-modern">
                                     <i class="si si-rocket fa-2x"></i>
                                     <div class="font-w600 push-15-t push-15">Frontend</div>

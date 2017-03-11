@@ -12,16 +12,38 @@ class Teacher extends Model
      * @var array
      */
     protected $fillable = [
-        'full_name', 'email', 'description', 'position'
+        'full_name',
+        'email',
+        'description',
+        'position'
     ];
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function topics()
     {
         return $this->hasMany(Topic::class);
+    }
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
+
+    public function count_student_topics()
+    {
+        return $this->topics
+            ->where('approve', true)
+            ->where('student_id', '<>', 0)->count();
+    }
+
+    public function count_pending_topics()
+    {
+        return $this->topics
+            ->where('approve', false)
+            ->where('student_id', '<>', 0)->count();
     }
 }

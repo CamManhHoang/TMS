@@ -11,6 +11,12 @@ class TeachersTableSeeder extends Seeder
      */
     public function run()
     {
+        $all_teachers = \App\Teacher::all();
+
+        foreach ($all_teachers as $teacher) {
+            $teacher->position = null;
+            $teacher->save();
+        }
         $teachers = \App\Teacher::where('id', '<', '30')->get();
         foreach ($teachers as $teacher) {
             $teacher->department_id = 1;
