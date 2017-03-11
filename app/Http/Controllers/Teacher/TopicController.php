@@ -10,6 +10,15 @@ use App\Http\Controllers\Controller;
 
 class TopicController extends Controller
 {
+    public function index()
+    {
+        $stt = 1;
+        $topics = Auth::user()->teacher->topics
+            ->where('approve', true)
+            ->where('student_id', '<>', 0);
+
+        return view('teacher.index', compact('topics', 'stt'));
+    }
     public function pending_topics()
     {
         $stt = 1;
