@@ -14,6 +14,8 @@
     <!-- Bootstrap and OneUI CSS framework -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" id="css-main" href="css/custom.css">
     <link rel="stylesheet" href="css/sweetalert.css">
     <!-- END Stylesheets -->
 </head>
@@ -46,6 +48,8 @@
 
 <!-- Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
 <script src="assets/js/core/jquery.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
 <script src="assets/js/core/bootstrap.min.js"></script>
 <script src="assets/js/core/jquery.slimscroll.min.js"></script>
 <script src="assets/js/core/jquery.scrollLock.min.js"></script>
@@ -60,11 +64,20 @@
 <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
 
 <!-- Page JS Code -->
-<script src="assets/js/pages/base_pages_dashboard.js"></script>
 <script>
     jQuery(function () {
-        // Init page helpers (Slick Slider plugin)
-        App.initHelpers('slick');
+        // Init page helpers (Appear plugin)
+        App.initHelpers('appear');
+        $('#pending-topics').DataTable({
+            "language": {
+                "lengthMenu": "Hiển thị _MENU_ bản ghi trên mỗi trang",
+                "search": "Tìm kiếm",
+                "zeroRecords": "Rất tiếc - Không có kết quả nào",
+                "info": "Hiển thị trang _PAGE_/_PAGES_",
+                "infoEmpty": "Không có bản ghi nào được tìm thấy",
+                "infoFiltered": "(Lọc trên tổng số _MAX_ bản ghi)"
+            }
+        });
     });
 </script>
 <script src="js/sweetalert.min.js"></script>

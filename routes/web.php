@@ -33,3 +33,8 @@ Route::group(['middleware' => ['auth', 'student']], function() {
     Route::get('/topic-registration', 'Student\TopicController@index');
     Route::put('/topic-register/{id}', 'Student\TopicController@register_topic')->name('register-topic');
 });
+
+//Teacher Section
+Route::group(['middleware' => ['auth', 'teacher']], function() {
+    Route::get('/pending-topics', 'Teacher\TopicController@pending_topics')->name('pending-topics');
+});
