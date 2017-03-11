@@ -38,4 +38,5 @@ Route::group(['middleware' => ['auth', 'student']], function() {
 Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/pending-topics', 'Teacher\TopicController@pending_topics')->name('pending-topics');
     Route::put('/approve-topic/{id}', 'Teacher\TopicController@approve')->name('approve-topic');
+    Route::put('/reject-topic/{id}', 'Teacher\TopicController@reject')->name('reject-topic');
 });

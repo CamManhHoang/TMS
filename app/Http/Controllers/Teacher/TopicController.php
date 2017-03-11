@@ -45,4 +45,16 @@ class TopicController extends Controller
             'Thành công')->autoclose(2500);
         return back();
     }
+
+    public function reject($id)
+    {
+        $topic = Topic::findOrFail($id);
+        $topic->student_id = 0;
+        $topic->approve = false;
+        $topic->save();
+
+        Alert::success('Đã hủy bỏ yêu cầu đăng ký đề tài khóa luận của sinh viên',
+            'Thành công')->autoclose(2500);
+        return back();
+    }
 }

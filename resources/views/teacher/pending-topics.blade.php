@@ -55,7 +55,7 @@
                                             }}
                                         {{ Form::close() }}
 
-                                        {{ Form::open(['method' => 'PUT', 'route'=>['register-topic', $topic->id], 'class' => 'float-left']) }}
+                                        {{ Form::open(['method' => 'PUT', 'route'=>['reject-topic', $topic->id], 'class' => 'float-left']) }}
                                             {{ Form::button('<i class="fa fa-times"></i>', [
                                                 'type' => 'submit',
                                                 'class' => 'btn btn-xs btn-danger',
