@@ -11,6 +11,7 @@ class TopicsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Topic::class, 1000)->create();
+        DB::table('topics')->truncate();
+        factory(\App\Topic::class, 100)->create();
     }
 }

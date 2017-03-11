@@ -53,7 +53,7 @@ class TeachersTableSeeder extends Seeder
             $teacher->save();
         }
 
-        $teachers7 = \App\Teacher::whereBetween('id', [181, 201])->get();
+        $teachers7 = \App\Teacher::whereBetween('id', [181, 199])->get();
         foreach ($teachers7 as $teacher) {
             $teacher->department_id = 7;
             $teacher->save();
