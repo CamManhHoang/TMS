@@ -28,7 +28,7 @@ class Topic extends Model
 
     public function topic_available()
     {
-        return $this->student == null || ($this->student != null && $this->approve == 0);
+        return $this->student == null;
     }
 
     public function topic_pending()
@@ -38,7 +38,7 @@ class Topic extends Model
 
     public function topic_not_available()
     {
-        return $this->student != null && $this->approve == 1;
+        return $this->student != null;
     }
 
     public function status()
