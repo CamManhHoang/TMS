@@ -37,4 +37,5 @@ Route::group(['middleware' => ['auth', 'student']], function() {
 //Teacher Section
 Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/pending-topics', 'Teacher\TopicController@pending_topics')->name('pending-topics');
+    Route::put('/approve-topic/{id}', 'Teacher\TopicController@approve')->name('approve-topic');
 });

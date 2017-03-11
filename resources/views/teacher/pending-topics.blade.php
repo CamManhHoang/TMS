@@ -31,9 +31,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($topics as $key => $topic)
+                        @foreach ($topics as $topic)
                             <tr>
-                                <td class="text-center"><strong>{{ $key }}</strong></td>
+                                <td class="text-center"><strong>{{ $stt++ }}</strong></td>
                                 <td>{{ $topic->student->full_name }}</td>
                                 <td style="max-width: 250px">{{ $topic->name }}</td>
                                 <td style="max-width: 300px;" class="td-description"
@@ -43,14 +43,14 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        {{ Form::open(['method' => 'PUT', 'route'=>['register-topic', $topic->id], 'class' => 'float-left']) }}
+                                        {{ Form::open(['method' => 'PUT', 'route'=>['approve-topic', $topic->id], 'class' => 'float-left']) }}
                                             {{ Form::button('<i class="fa fa fa-check"></i>', [
                                                 'type' => 'submit',
                                                 'class' => 'btn btn-xs btn-info',
                                                 'data-toggle' => 'tooltip',
                                                 'title' => '',
                                                 'data-original-title' => 'Đồng ý yêu cầu',
-                                                'onclick' => "return confirm('Bạn có chắc chắc muốn đăng ký đề tài này?')"
+                                                'onclick' => "return confirm('Xác nhận đồng ý đăng ký đề tài của sinh viên?')"
                                                 ])
                                             }}
                                         {{ Form::close() }}
@@ -62,7 +62,7 @@
                                                 'data-toggle' => 'tooltip',
                                                 'title' => '',
                                                 'data-original-title' => 'Xóa bỏ yêu cầu',
-                                                'onclick' => "return confirm('Bạn có chắc chắc muốn đăng ký đề tài này?')"
+                                                'onclick' => "return confirm('Xác nhận hủy yêu cầu đề tài của sinh viên?')"
                                                 ])
                                             }}
                                         {{ Form::close() }}
