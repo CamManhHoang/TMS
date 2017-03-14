@@ -12,7 +12,7 @@
                 <div class="collapse navbar-collapse remove-padding" id="inbox-nav">
                     <!-- Account -->
                     <div class="block block-themed">
-                        <div class="block-header bg-info">
+                        <div class="block-header bg-amethyst-dark">
                             <ul class="block-options">
                                 <li>
                                     <button type="button"><i class="si si-settings"></i></button>
@@ -60,7 +60,7 @@
             </div>
             <div class="col-sm-7 col-lg-9">
                 <div class="block block block-themed">
-                    <div class="block-header bg-info">
+                    <div class="block-header bg-amethyst-dark">
                         <ul class="block-options">
                             <li>
                                 <button type="button"><i class="si si-settings"></i></button>
