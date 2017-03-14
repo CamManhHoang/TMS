@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="block-content">
-                    <table id="pending-topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
+                    <table id="topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                         <thead>
                         <tr>
                             <th>STT</th>

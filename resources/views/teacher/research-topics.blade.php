@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Danh sách đề tài hướng dẫn
+    Các chủ đề nghiên cứu
 @endsection
 
 @section('content')
@@ -16,11 +16,11 @@
                             <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                         </li>
                     </ul>
-                    <h3 class="block-title">Danh sách đề tài hướng dẫn</h3>
+                    <h3 class="block-title">Danh sách chủ đề nghiên cứu</h3>
                 </div>
 
                 <div class="block-content">
-                    <table class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
+                    <table id="topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                         <thead>
                         <tr>
                             <th>STT</th>

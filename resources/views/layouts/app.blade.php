@@ -68,7 +68,7 @@
     jQuery(function () {
         // Init page helpers (Appear plugin)
         App.initHelpers('appear');
-        $('#pending-topics').DataTable({
+        $('#topics').DataTable({
             "language": {
                 "lengthMenu": "Hiển thị _MENU_ bản ghi trên mỗi trang",
                 "search": "Tìm kiếm",
