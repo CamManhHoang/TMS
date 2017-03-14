@@ -57,4 +57,21 @@ class Topic extends Model
             <?php
         }
     }
+
+    public function research_status()
+    {
+        if ($this->student != null && $this->approve == 1) {
+            echo ''?>
+            <span class="label label-danger">Đã có sinh viên tham gia</span>
+            <?php
+        } else if ($this->student != null && $this->approve == 0){
+            echo ''?>
+            <span class="label label-info">Đang có sv đăng ký</span>
+            <?php
+        } else {
+            echo '' ?>
+            <span class="label label-success">Còn trống</span>
+            <?php
+        }
+    }
 }

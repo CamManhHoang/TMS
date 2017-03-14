@@ -24,24 +24,22 @@
                         <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Họ Tên Sinh viên</th>
                             <th>Tên đề tài</th>
                             <th>Mô tả</th>
-                            <th class="text-center">Trạng thái</th>
+                            <th>Trạng thái</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($topics as $topic)
                             <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
-                                <td>{{ $topic->student->full_name }}</td>
                                 <td style="max-width: 250px">{{ $topic->name }}</td>
                                 <td style="max-width: 300px;" class="td-description"
                                     data-toggle="popover"
                                     data-placement="bottom"
                                     data-content="{{ $topic->description }}">{{ $topic->description }}
                                 </td>
-                                <td class="text-center"><span class="label label-info">Approved</span></td>
+                                <td>{{ $topic->research_status() }}</td>
                             </tr>
                         @endforeach
                         </tbody>

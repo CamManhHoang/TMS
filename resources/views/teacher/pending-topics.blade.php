@@ -33,7 +33,7 @@
                         <tbody>
                         @foreach ($topics as $topic)
                             <tr>
-                                <td class="text-center"><strong>{{ $stt++ }}</strong></td>
+                                <td><strong>{{ $stt++ }}</strong></td>
                                 <td>{{ $topic->student->full_name }}</td>
                                 <td style="max-width: 250px">{{ $topic->name }}</td>
                                 <td style="max-width: 300px;" class="td-description"
