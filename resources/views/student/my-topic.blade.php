@@ -10,7 +10,7 @@
             <div class="block">
                 <div class="block-content block-content-full ribbon ribbon-modern ribbon-danger ribbon-left">
                     <div class="ribbon-box font-w600">
-                        <i class="fa fa-fw fa-heart-o"></i>
+                        <i class="fa fa-close"></i> Thông báo
                     </div>
                     <div class="text-center push-20-t push">
                         <i class="fa fa-files-o fa-3x text-flat-dark push"></i>
