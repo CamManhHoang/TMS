@@ -37,4 +37,12 @@ class TopicController extends Controller
         return back();
     }
 
+    public function show()
+    {
+        $user = Auth::user();
+
+        $topic = $user->student->topics->where('approve', 1)->first();
+
+        return view('student.my-topic', compact('topic'));
+    }
 }
