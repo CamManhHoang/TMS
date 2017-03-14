@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-sm-6 col-lg-3">
                 <a class="block block-link-hover1 text-center" href="/research-topics">
-                    <div class="block-content block-content-full bg-info">
+                    <div class="block-content block-content-full bg-amethyst-dark">
                         <i class="fa fa-book fa-5x text-white"></i>
                     </div>
                     <div class="block-content block-content-full block-content-mini">
@@ -49,7 +49,7 @@
             </div>
             <div class="col-sm-6 col-lg-3">
                 <a class="block block-link-hover1 text-center" href="/teacher-info">
-                    <div class="block-content block-content-full bg-danger">
+                    <div class="block-content block-content-full bg-info">
                         <i class="si si-badge fa-5x text-white"></i>
                     </div>
                     <div class="block-content block-content-full block-content-mini">
