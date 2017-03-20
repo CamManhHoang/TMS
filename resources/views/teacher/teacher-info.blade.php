@@ -36,7 +36,7 @@
                                 <li>
                                     <a href="/research-topics">
                                         <span class="badge pull-right">{{ $teacher->topics->count() }}</span><i
-                                                class="fa fa-book"></i> Chủ đề nghiên cứu
+                                                class="fa fa-book"></i> Đề tài nghiên cứu
                                     </a>
                                 </li>
                                 <li>

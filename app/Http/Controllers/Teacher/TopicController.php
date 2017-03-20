@@ -10,15 +10,24 @@ use App\Http\Controllers\Controller;
 
 class TopicController extends Controller
 {
-    public function index()
+    public function research_topics()
+    {
+        $stt = 1;
+        $topics = Auth::user()->teacher->topics;
+
+        return view('teacher.research-topics', compact('topics', 'stt'));
+    }
+
+    public function student_topics()
     {
         $stt = 1;
         $topics = Auth::user()->teacher->topics
             ->where('approve', true)
             ->where('student_id', '<>', 0);
 
-        return view('teacher.index', compact('topics', 'stt'));
+        return view('teacher.student-topics', compact('topics', 'stt'));
     }
+
     public function pending_topics()
     {
         $stt = 1;
@@ -65,5 +74,10 @@ class TopicController extends Controller
         Alert::success('Đã hủy bỏ yêu cầu đăng ký đề tài khóa luận của sinh viên',
             'Thành công')->autoclose(2500);
         return back();
+    }
+
+    public function add_topics()
+    {
+        return view('teacher.add-topics');
     }
 }

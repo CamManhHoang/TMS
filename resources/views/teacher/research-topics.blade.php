@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Các chủ đề nghiên cứu
+    Các đề tài nghiên cứu
 @endsection
 
 @section('content')
@@ -11,12 +11,12 @@
             <!-- Main Block -->
             <div class="block">
                 <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Danh sách chủ đề nghiên cứu</h3>
+                    <div class="block-options-simple">
+                        <button class="btn btn-sm btn-success btn-rounded" type="button" data-toggle="modal" data-target="#add-topic">
+                            <i class="fa fa-plus-circle"></i> Thêm đề tài
+                        </button>
+                    </div>
+                    <h3 class="block-title">Danh sách đề tài nghiên cứu</h3>
                 </div>
 
                 <div class="block-content">
@@ -51,4 +51,5 @@
 
     </div>
     <!-- END Page Content -->
+    @include('teacher.modals.add-topic')
 @endsection

@@ -37,10 +37,11 @@ Route::group(['middleware' => ['auth', 'student']], function() {
 
 //Teacher Section
 Route::group(['middleware' => ['auth', 'teacher']], function() {
-    Route::get('/student-topics', 'Teacher\TopicController@index')->name('student-topics');
+    Route::get('/teacher-info', 'Teacher\TeacherController@show')->name('teacher-info');
+    Route::get('/student-topics', 'Teacher\TopicController@student_topics')->name('student-topics');
     Route::get('/pending-topics', 'Teacher\TopicController@pending_topics')->name('pending-topics');
     Route::put('/approve-topic/{id}', 'Teacher\TopicController@approve')->name('approve-topic');
     Route::put('/reject-topic/{id}', 'Teacher\TopicController@reject')->name('reject-topic');
-    Route::get('/teacher-info', 'Teacher\TeacherController@show')->name('teacher-info');
-    Route::get('/research-topics', 'Teacher\TeacherController@index')->name('research-topics');
+    Route::get('/research-topics', 'Teacher\TopicController@research_topics')->name('research-topics');
+    Route::post('/add-topic', 'Teacher\TopicController@store');
 });

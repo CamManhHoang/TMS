@@ -8,7 +8,7 @@
 <li>
     <a class="{{ Request::is('research-topics') ? 'active' : '' }}" href="/research-topics">
         <i class="fa fa-book"></i>
-        <span class="sidebar-mini-hide">Chủ đề nghiên cứu</span>
+        <span class="sidebar-mini-hide">Đề tài nghiên cứu</span>
     </a>
 </li>
 <li>
