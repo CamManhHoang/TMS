@@ -12,8 +12,10 @@ class TopicController extends Controller
 {
     public function index()
     {
+        $stt = 1;
         $topics = Topic::all();
-        return view('student.topic', compact('topics'));
+
+        return view('student.topic', compact('topics', 'stt'));
     }
 
     public function register_topic($id)

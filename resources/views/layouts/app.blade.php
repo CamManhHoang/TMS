@@ -62,6 +62,8 @@
 <!-- Page Plugins -->
 <script src="assets/js/plugins/slick/slick.min.js"></script>
 <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
+<script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
 
 <!-- Page JS Code -->
 <script>
@@ -81,6 +83,7 @@
     });
 </script>
 <script src="js/sweetalert.min.js"></script>
+<script src="assets/js/pages/base_forms_validation.js"></script>
 @include('sweet::alert')
 </body>
 </html>

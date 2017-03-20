@@ -21,7 +21,7 @@
                 <table id="all-topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                     <thead>
                     <tr>
-                        <th>#</th>
+                        <th class="text-center">#</th>
                         <th>Tên đề tài</th>
                         <th>Mô tả</th>
                         <th>Giảng viên</th>
@@ -32,7 +32,7 @@
                     <tbody>
                         @foreach ($topics as $topic)
                             <tr>
-                                <td class="text-center">{{ $topic->id }}</td>
+                                <td class="text-center"><strong>{{ $stt++ }}</strong></td>
                                 <td style="max-width: 300px">{{ $topic->name }}</td>
                                 <td class="td-description" data-toggle="popover" data-placement="bottom" data-content="{{ $topic->description }}">{{ $topic->description }}</td>
                                 <td>{{ $topic->teacher->full_name }}</td>

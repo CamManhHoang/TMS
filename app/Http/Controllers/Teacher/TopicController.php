@@ -13,7 +13,7 @@ class TopicController extends Controller
     public function research_topics()
     {
         $stt = 1;
-        $topics = Auth::user()->teacher->topics;
+        $topics = Auth::user()->teacher->topics->sortByDesc('created_at');
 
         return view('teacher.research-topics', compact('topics', 'stt'));
     }
@@ -76,8 +76,22 @@ class TopicController extends Controller
         return back();
     }
 
-    public function add_topics()
+    public function store(Request $request)
     {
-        return view('teacher.add-topics');
+        $this->validate($request, [
+            'name' => 'required|min:6',
+            'description' => 'required|min:6',
+        ]);
+
+        $topic = new Topic();
+        $topic->name = $request->name;
+        $topic->description = $request->description;
+        $topic->student_id = 0;
+        $topic->teacher_id = Auth::user()->teacher->id;
+        $topic->save();
+
+        Alert::success('Thêm mới đề tài nghiên cứu thành công!',
+            'Thành công')->autoclose(2500);
+        return back();
     }
 }

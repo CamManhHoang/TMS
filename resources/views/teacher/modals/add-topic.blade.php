@@ -1,26 +1,40 @@
 <!-- Fade In Modal -->
 <div class="modal fade" id="add-topic" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="block block-themed block-transparent remove-margin-b">
-                <div class="block-header bg-primary-dark">
-                    <ul class="block-options">
-                        <li>
-                            <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Terms &amp; Conditions</h3>
+        <form class="js-validation-bootstrap form-horizontal" action="{{ route('topic.store') }}" method="post" novalidate="novalidate">
+            {{ csrf_field() }}
+            <div class="modal-content">
+                <div class="block block-themed block-transparent remove-margin-b">
+                    <div class="block-header bg-primary-dark">
+                        <ul class="block-options">
+                            <li>
+                                <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+                            </li>
+                        </ul>
+                        <h3 class="block-title">Thêm đề tài nghiên cứu</h3>
+                    </div>
+                    <div class="block-content">
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="name">Tên đề tài <span class="text-danger">*</span></label>
+                            <div class="col-md-7">
+                                <input class="form-control" type="text" id="name" name="name" placeholder="Gõ tên đề tài nghiên cứu...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="description">Mô tả <span class="text-danger">*</span></label>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="description" name="description" rows="6" placeholder="Viết thêm một chút mô tả về đề tài ở đây.."></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-sm btn-primary" type="submit" ><i class="fa fa-check"></i> Ok</button>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
-                <button class="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Ok</button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
 <!-- END Fade In Modal -->

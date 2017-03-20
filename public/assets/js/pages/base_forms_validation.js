@@ -27,9 +27,9 @@ var BaseFormValidation = function() {
                 elem.closest('.help-block').remove();
             },
             rules: {
-                'val-username': {
+                'name': {
                     required: true,
-                    minlength: 3
+                    minlength: 6
                 },
                 'val-email': {
                     required: true,
@@ -50,9 +50,9 @@ var BaseFormValidation = function() {
                     required: true,
                     minlength: 2
                 },
-                'val-suggestions': {
+                'description': {
                     required: true,
-                    minlength: 5
+                    minlength: 6
                 },
                 'val-skill': {
                     required: true
@@ -86,9 +86,9 @@ var BaseFormValidation = function() {
                 }
             },
             messages: {
-                'val-username': {
-                    required: 'Please enter a username',
-                    minlength: 'Your username must consist of at least 3 characters'
+                'name': {
+                    required: 'Phần tên đề tài là bắt buộc',
+                    minlength: 'Tên đề tài cần ít nhất 6 ký tự trở lên.'
                 },
                 'val-email': 'Please enter a valid email address',
                 'val-password': {
@@ -102,7 +102,10 @@ var BaseFormValidation = function() {
                 },
                 'val-select2': 'Please select a value!',
                 'val-select2-multiple': 'Please select at least 2 values!',
-                'val-suggestions': 'What can we do to become better?',
+                'description': {
+                    required: 'Phần mô tả bắt buộc',
+                    minlength: 'Viết mô tả ít nhất 6 ký tự trở lên.'
+                },
                 'val-skill': 'Please select a skill!',
                 'val-currency': 'Please enter a price!',
                 'val-website': 'Please enter your website!',

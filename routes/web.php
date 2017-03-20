@@ -43,5 +43,5 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::put('/approve-topic/{id}', 'Teacher\TopicController@approve')->name('approve-topic');
     Route::put('/reject-topic/{id}', 'Teacher\TopicController@reject')->name('reject-topic');
     Route::get('/research-topics', 'Teacher\TopicController@research_topics')->name('research-topics');
-    Route::post('/add-topic', 'Teacher\TopicController@store');
+    Route::post('/add-topic', 'Teacher\TopicController@store')->name('topic.store');
 });
