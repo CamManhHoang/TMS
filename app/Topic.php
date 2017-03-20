@@ -62,7 +62,7 @@ class Topic extends Model
     {
         if ($this->student != null && $this->approve == 1) {
             echo ''?>
-            <span class="label label-danger">Đã có sinh viên tham gia</span>
+            <span class="label label-danger">Đã có sv tham gia</span>
             <?php
         } else if ($this->student != null && $this->approve == 0){
             echo ''?>

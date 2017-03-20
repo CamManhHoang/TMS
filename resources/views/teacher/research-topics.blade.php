@@ -12,7 +12,8 @@
             <div class="block">
                 <div class="block-header">
                     <div class="block-options-simple">
-                        <button class="btn btn-sm btn-success btn-rounded" type="button" data-toggle="modal" data-target="#add-topic">
+                        <button class="btn btn-sm btn-success btn-rounded" type="button" data-toggle="modal"
+                                data-target="#add-topic">
                             <i class="fa fa-plus-circle"></i> Thêm đề tài
                         </button>
                     </div>
@@ -20,13 +21,15 @@
                 </div>
 
                 <div class="block-content">
-                    <table id="topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
+                    <table id="topics"
+                           class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                         <thead>
                         <tr>
                             <th>STT</th>
                             <th>Tên đề tài</th>
                             <th>Mô tả</th>
                             <th>Trạng thái</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,6 +43,23 @@
                                     data-content="{{ $topic->description }}">{{ $topic->description }}
                                 </td>
                                 <td>{{ $topic->research_status() }}</td>
+                                <td>
+                                    @if ($topic->topic_available())
+                                        <div class="btn-group">
+                                            {{ Form::open(['method' => 'DELETE', 'route'=>['topic.delete', $topic->id], 'class' => 'float-left']) }}
+                                            {{ Form::button('<i class="fa fa-times"></i>', [
+                                                'type' => 'submit',
+                                                'class' => 'btn btn-xs btn-danger',
+                                                'data-toggle' => 'tooltip',
+                                                'title' => '',
+                                                'data-original-title' => 'Xóa đề tài',
+                                                'onclick' => "return confirm('Xác nhận xóa đề tài nghiên cứu?')"
+                                                ])
+                                            }}
+                                            {{ Form::close() }}
+                                        </div>
+                                    @endif
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

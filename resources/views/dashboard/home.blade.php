@@ -23,7 +23,7 @@
                         <i class="fa fa-book fa-5x text-white"></i>
                     </div>
                     <div class="block-content block-content-full block-content-mini">
-                        <strong>Chủ đề nghiên cứu</strong>
+                        <strong>Đề tài nghiên cứu</strong>
                     </div>
                 </a>
             </div>

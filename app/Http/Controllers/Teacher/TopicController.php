@@ -94,4 +94,18 @@ class TopicController extends Controller
             'Thành công')->autoclose(2500);
         return back();
     }
+
+    public function destroy($id)
+    {
+        $topic = Topic::findOrFail($id);
+        if ($topic->topic_not_available()) {
+            Alert::error('Đề tài này đang có sinh viên đăng ký. Không được phép xóa', 'Có lỗi xảy ra')->autoclose(2500);
+            return back();
+        }
+        $topic->delete();
+
+        Alert::success('Xoá đề tài thành công!',
+            'Thành công')->autoclose(2500);
+        return back();
+    }
 }
