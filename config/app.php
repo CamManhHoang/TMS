@@ -166,6 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
