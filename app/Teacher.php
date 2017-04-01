@@ -23,7 +23,7 @@ class Teacher extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function researchs()
+    public function researches()
     {
         return $this->hasMany(Research::class);
     }

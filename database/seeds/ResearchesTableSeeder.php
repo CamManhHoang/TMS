@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ResearchsTableSeeder extends Seeder
+class ResearchesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class ResearchsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('researches')->truncate();
+        factory(\App\Research::class, 200)->create();
     }
 }
