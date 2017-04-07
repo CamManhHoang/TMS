@@ -21,9 +21,9 @@ class Student extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function teacher()
+    public function teachers()
     {
-        return $this->belongsToMany(Teacher::class);
+        return $this->belongsToMany(Teacher::class)->withTimestamps();;
     }
 
     public function topics()

@@ -13,7 +13,7 @@ class CreateTeacherStudentTable extends Migration
      */
     public function up()
     {
-        Schema::create('teacher_student', function (Blueprint $table) {
+        Schema::create('student_teacher', function (Blueprint $table) {
             $table->integer('teacher_id')->unsigned();
             $table->integer('student_id')->unsigned();
             $table->foreign('teacher_id')->references('id')->on('teachers');
@@ -31,6 +31,6 @@ class CreateTeacherStudentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teacher_student');
+        Schema::dropIfExists('student_teacher');
     }
 }

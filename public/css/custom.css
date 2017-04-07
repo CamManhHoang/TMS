@@ -1,3 +1,9 @@
+.odd-even:nth-child(odd) {
+    color: #46c37b;
+}
+.odd-even:nth-child(even) {
+    color: #d26a5c;
+}
 .td-description {
     max-width: 350px;
     overflow: hidden;
