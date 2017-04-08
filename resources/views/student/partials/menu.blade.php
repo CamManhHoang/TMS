@@ -24,9 +24,9 @@
                     <i class="fa fa-briefcase push-5-r"></i>Đăng ký đề tài
                 </a>
             </li>
-            <li class="{{ Request::is('topic-modification') ? 'active' : '' }}">
-                <a href="/topic-modification">
-                    <i class="fa fa-book push-5-r"></i>Sửa đổi đề tài
+            <li class="{{ Request::is('register-status') ? 'active' : '' }}">
+                <a href="/register-status">
+                    <i class="fa fa-book push-5-r"></i>Trạng thái đăng ký
                 </a>
             </li>
             <li class="{{ Request::is('my-topic') ? 'active' : '' }}">

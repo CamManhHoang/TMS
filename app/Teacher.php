@@ -30,7 +30,7 @@ class Teacher extends Model
 
     public function students()
     {
-        return $this->belongsToMany(Student::class)->withTimestamps();;
+        return $this->belongsToMany(Student::class)->withTimestamps()->withPivot('teacher_approve', 'student_approve');
     }
 
     public function topics()

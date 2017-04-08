@@ -33,6 +33,9 @@ Route::group(['middleware' => ['auth', 'student']], function() {
     Route::get('/topic-registration', 'Student\TopicController@index');
     Route::get('/teachers-info', 'Student\TeacherController@index');
     Route::post('/teacher-student/{id}', 'Student\TeacherController@store')->name('teacher-student');
+    Route::get('/register-status', 'Student\RegisterController@index');
+    Route::put('/reject-teacher/{id}', 'Student\RegisterController@destroy')->name('reject-teacher');
+    Route::put('/approve-teacher/{id}', 'Student\RegisterController@approve')->name('approve-teacher');
     Route::get('/my-topic', 'Student\TopicController@show');
     Route::put('/topic-register/{id}', 'Student\TopicController@register_topic')->name('register-topic');
 });
