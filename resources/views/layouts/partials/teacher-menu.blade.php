@@ -8,7 +8,7 @@
 <li>
     <a class="{{ Request::is('research-topics') ? 'active' : '' }}" href="/research-topics">
         <i class="fa fa-book"></i>
-        <span class="sidebar-mini-hide">Đề tài nghiên cứu</span>
+        <span class="sidebar-mini-hide">Hướng nghiên cứu</span>
     </a>
 </li>
 <li>
@@ -27,9 +27,9 @@
     </a>
 </li>
 <li>
-    <a class="{{ Request::is('pending-topics') ? 'active' : '' }}" href="/pending-topics">
+    <a class="{{ Request::is('students-register') ? 'active' : '' }}" href="/students-register">
         <i class="fa fa-list-alt"></i>
-        <span class="sidebar-mini-hide">Đề tài chờ xử lý</span>
+        <span class="sidebar-mini-hide">Sinh viên đăng ký</span>
     </a>
 </li>
 <li>

@@ -52,4 +52,6 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/research-topics', 'Teacher\ResearchController@research_topics')->name('research-topics');
     Route::post('/add-research', 'Teacher\ResearchController@store')->name('research.store');
     Route::delete('/delete-research/{id}', 'Teacher\ResearchController@destroy')->name('research.delete');
+    // Students Register
+    Route::get('/students-register', 'Teacher\StudentController@students_register')->name('students-register');
 });
