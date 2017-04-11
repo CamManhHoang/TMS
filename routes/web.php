@@ -47,7 +47,9 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/pending-topics', 'Teacher\TopicController@pending_topics')->name('pending-topics');
     Route::put('/approve-topic/{id}', 'Teacher\TopicController@approve')->name('approve-topic');
     Route::put('/reject-topic/{id}', 'Teacher\TopicController@reject')->name('reject-topic');
-    Route::get('/research-topics', 'Teacher\TopicController@research_topics')->name('research-topics');
     Route::post('/add-topic', 'Teacher\TopicController@store')->name('topic.store');
     Route::delete('/delete-topic/{id}', 'Teacher\TopicController@destroy')->name('topic.delete');
+    Route::get('/research-topics', 'Teacher\ResearchController@research_topics')->name('research-topics');
+    Route::post('/add-research', 'Teacher\ResearchController@store')->name('research.store');
+    Route::delete('/delete-research/{id}', 'Teacher\ResearchController@destroy')->name('research.delete');
 });

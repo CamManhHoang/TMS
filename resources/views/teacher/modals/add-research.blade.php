@@ -1,7 +1,7 @@
 <!-- Fade In Modal -->
-<div class="modal fade" id="add-topic" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="add-research" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
-        <form class="js-validation-bootstrap form-horizontal" action="{{ route('topic.store') }}" method="post" novalidate="novalidate">
+        <form class="js-validation-bootstrap form-horizontal" action="{{ route('research.store') }}" method="post" novalidate="novalidate">
             {{ csrf_field() }}
             <div class="modal-content">
                 <div class="block block-themed block-transparent remove-margin-b">
@@ -11,20 +11,20 @@
                                 <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
                             </li>
                         </ul>
-                        <h3 class="block-title">Thêm đề tài nghiên cứu</h3>
+                        <h3 class="block-title">Thêm hướng nghiên cứu</h3>
                     </div>
                     <div class="block-content">
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="name">Tên đề tài <span class="text-danger">*</span></label>
+                            <label class="col-md-4 control-label" for="name">Tên hướng nghiên cứu <span class="text-danger">*</span></label>
                             <div class="col-md-7">
-                                <input class="form-control" type="text" id="name" name="name" placeholder="Gõ tên đề tài nghiên cứu...">
+                                <input class="form-control" type="text" id="name" name="name" placeholder="Gõ tên hướng nghiên cứu...">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="description">Mô tả <span class="text-danger">*</span></label>
                             <div class="col-md-8">
-                                <textarea class="form-control" id="description" name="description" rows="6" placeholder="Viết thêm một chút mô tả về đề tài ở đây.."></textarea>
+                                <textarea class="form-control" id="description" name="description" rows="6" placeholder="Viết thêm một chút mô tả về hướng nghiên cứu ở đây.."></textarea>
                             </div>
                         </div>
                     </div>

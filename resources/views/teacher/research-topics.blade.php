@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Các đề tài nghiên cứu
+    Các Hướng Nghiên Cứu
 @endsection
 
 @section('content')
@@ -13,52 +13,47 @@
                 <div class="block-header">
                     <div class="block-options-simple">
                         <button class="btn btn-sm btn-success btn-rounded" type="button" data-toggle="modal"
-                                data-target="#add-topic">
-                            <i class="fa fa-plus-circle"></i> Thêm đề tài
+                                data-target="#add-research">
+                            <i class="fa fa-plus-circle"></i> Thêm hướng nghiên cứu
                         </button>
                     </div>
-                    <h3 class="block-title">Danh sách đề tài nghiên cứu</h3>
+                    <h3 class="block-title">Danh sách hướng nghiên cứu</h3>
                 </div>
 
                 <div class="block-content">
-                    <table id="topics"
-                           class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
+                    <table class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                         <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Tên đề tài</th>
+                            <th>Tên hướng nghiên cứu</th>
                             <th>Mô tả</th>
-                            <th>Trạng thái</th>
-                            <th></th>
+                            <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($topics as $topic)
+                        @foreach ($researches as $research)
                             <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
-                                <td style="max-width: 250px">{{ $topic->name }}</td>
+                                <td style="max-width: 250px">{{ $research->name }}</td>
                                 <td style="max-width: 300px;" class="td-description"
                                     data-toggle="popover"
                                     data-placement="bottom"
-                                    data-content="{{ $topic->description }}">{{ $topic->description }}
+                                    data-content="{{ $research->description }}">{{ $research->description }}
                                 </td>
-                                <td>{{ $topic->research_status() }}</td>
                                 <td>
-                                    @if ($topic->topic_available())
-                                        <div class="btn-group">
-                                            {{ Form::open(['method' => 'DELETE', 'route'=>['topic.delete', $topic->id], 'class' => 'float-left']) }}
-                                            {{ Form::button('<i class="fa fa-times"></i>', [
-                                                'type' => 'submit',
-                                                'class' => 'btn btn-xs btn-danger',
-                                                'data-toggle' => 'tooltip',
-                                                'title' => '',
-                                                'data-original-title' => 'Xóa đề tài',
-                                                'onclick' => "return confirm('Xác nhận xóa đề tài nghiên cứu?')"
-                                                ])
-                                            }}
-                                            {{ Form::close() }}
-                                        </div>
-                                    @endif
+                                    <div class="btn-group">
+                                        {{ Form::open(['method' => 'DELETE', 'route'=>['research.delete', $research->id], 'class' => 'float-left']) }}
+                                        {{ Form::button('<i class="fa fa-times"></i>', [
+                                            'type' => 'submit',
+                                            'class' => 'btn btn-xs btn-danger',
+                                            'data-toggle' => 'tooltip',
+                                            'title' => '',
+                                            'data-original-title' => 'Xóa hướng nghiên cứu',
+                                            'onclick' => "return confirm('Xác nhận xóa hướng nghiên cứu?')"
+                                            ])
+                                        }}
+                                        {{ Form::close() }}
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach
@@ -71,5 +66,5 @@
 
     </div>
     <!-- END Page Content -->
-    @include('teacher.modals.add-topic')
+    @include('teacher.modals.add-research')
 @endsection
