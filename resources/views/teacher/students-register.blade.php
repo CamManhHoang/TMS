@@ -39,14 +39,14 @@
                                 <td>{{ $student->email }}</td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        {{ Form::open(['method' => 'PUT', 'route'=>['approve-topic', $student->id], 'class' => 'float-left']) }}
+                                        {{ Form::open(['method' => 'PUT', 'route'=>['approve-student', $student->id], 'class' => 'float-left']) }}
                                         {{ Form::button('<i class="fa fa fa-check"></i>', [
                                             'type' => 'submit',
                                             'class' => 'btn btn-xs btn-info',
                                             'data-toggle' => 'tooltip',
                                             'title' => '',
                                             'data-original-title' => 'Đồng ý yêu cầu',
-                                            'onclick' => "return confirm('Xác nhận đồng ý đăng ký đề tài của sinh viên?')"
+                                            'onclick' => "return confirm('Xác nhận đồng ý đăng ký tham gia nghiên cứu khóa luận của sinh viên?')"
                                             ])
                                         }}
                                         {{ Form::close() }}

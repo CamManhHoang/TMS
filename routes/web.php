@@ -54,4 +54,5 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::delete('/delete-research/{id}', 'Teacher\ResearchController@destroy')->name('research.delete');
     // Students Register
     Route::get('/students-register', 'Teacher\StudentController@students_register')->name('students-register');
+    Route::put('/approve-student/{id}', 'Teacher\StudentController@approve')->name('approve-student');
 });
