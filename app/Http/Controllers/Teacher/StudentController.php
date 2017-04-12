@@ -39,4 +39,14 @@ class StudentController extends Controller
             return back();
         }
     }
+
+    public function reject($id)
+    {
+        $teacher = Auth::user()->teacher;
+        $teacher->students()->detach($id);
+
+        \Alert::success('Đã hủy bỏ yêu cầu đăng ký tham gia khóa luận của sinh viên',
+            'Thành công')->autoclose(2500);
+        return back();
+    }
 }

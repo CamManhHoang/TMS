@@ -51,14 +51,14 @@
                                         }}
                                         {{ Form::close() }}
 
-                                        {{ Form::open(['method' => 'PUT', 'route'=>['reject-topic', $student->id], 'class' => 'float-left']) }}
+                                        {{ Form::open(['method' => 'DELETE', 'route'=>['reject-student', $student->id], 'class' => 'float-left']) }}
                                         {{ Form::button('<i class="fa fa-times"></i>', [
                                             'type' => 'submit',
                                             'class' => 'btn btn-xs btn-danger',
                                             'data-toggle' => 'tooltip',
                                             'title' => '',
                                             'data-original-title' => 'Xóa bỏ yêu cầu',
-                                            'onclick' => "return confirm('Xác nhận hủy yêu cầu đề tài của sinh viên?')"
+                                            'onclick' => "return confirm('Xác nhận hủy yêu cầu đăng ký tham gia khóa luận của sinh viên?')"
                                             ])
                                         }}
                                         {{ Form::close() }}
