@@ -32,7 +32,8 @@
                         </thead>
                         <tbody>
                         @foreach ($students as $student)
-                            <tr>
+                            @if( !$student->pivot->teacher_approve )
+                                <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
                                 <td>{{ $student->full_name }}</td>
                                 <td>{{ $student->student_id }}</td>
@@ -65,6 +66,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            @endif
                         @endforeach
                         </tbody>
                     </table>

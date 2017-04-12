@@ -17,7 +17,6 @@ class StudentController extends Controller
             $q->where('teacher_approve', '=', 0)->where('student_approve', '=', 0);
         })->get();
 
-
         return view('teacher.students-register', compact('students', 'stt'));
     }
 

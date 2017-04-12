@@ -48,7 +48,7 @@
                                 <li>
                                     <a href="/pending-topics">
                                         <span class="badge pull-right">{{ $teacher->count_pending_topics() }}</span><i
-                                                class="fa fa-list-alt""></i> Đề tài chờ xử lý
+                                                class="fa fa-list-alt"></i> Đề tài chờ xử lý
                                     </a>
                                 </li>
                             </ul>
