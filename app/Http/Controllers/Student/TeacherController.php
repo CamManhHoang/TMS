@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Student;
 
 use Alert;
+use Auth;
 use App\Teacher;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,9 +13,11 @@ class TeacherController extends Controller
     public function index()
     {
         $stt = 1;
-
         $teachers = Teacher::with('researches')->get();
-        return view('student.teachers-info', compact('teachers', 'stt'));
+        $student_teachers = Auth::user()->student->teachers;
+        $student_approved = $student_teachers->contains('pivot.student_approve', 1);
+
+        return view('student.teachers-info', compact('teachers', 'stt', 'student_approved'));
     }
 
     public function store(Request $request)

@@ -14,7 +14,7 @@
                     </div>
                     <div class="text-center push-20-t push">
                         <i class="fa fa-files-o fa-3x text-flat-dark push"></i>
-                        <h3 class="h4">Bạn chưa đăng ký thành công bất cứ đề tài khóa luận nào.</h3>
+                        <h3 class="h4">Bạn chưa được giáo viên hướng dẫn phân công đề tài.</h3>
                     </div>
                 </div>
             </div>
