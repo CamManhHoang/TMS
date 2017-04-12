@@ -19,12 +19,9 @@ class RegisterController extends Controller
     public function approve($id)
     {
         $student = \Auth::user()->student;
-        $teachers = $student->teachers()->whereHas('students', function ($q) {
-            $q->where('teacher_approve', '=', 1)->where('student_approve', '=', 1);
-        })->get();
-        $teacher_number = $teachers->count();
+        $student_approved = $student->teachers()->where('student_approve', 1)->exists();
 
-        if ($teacher_number >=1) {
+        if ($student_approved) {
             \Alert::error('Bạn đã được tham gia nghiên cứu khóa luận với 1 giáo viên.', 'Có lỗi xảy ra')->autoclose(1500);
             return back();
         } else {

@@ -21,11 +21,10 @@ class TopicController extends Controller
     public function student_topics()
     {
         $stt = 1;
-        $topics = Auth::user()->teacher->topics
-            ->where('approve', true)
-            ->where('student_id', '<>', 0);
+        $teacher = \Auth::user()->teacher;
+        $students = $teacher->students()->where('student_approve', 1)->get();
 
-        return view('teacher.student-topics', compact('topics', 'stt'));
+        return view('teacher.student-topics', compact('students', 'stt'));
     }
 
     public function pending_topics()

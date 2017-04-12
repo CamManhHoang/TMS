@@ -23,7 +23,7 @@
 <li>
     <a class="{{ Request::is('student-topics') ? 'active' : '' }}" href="/student-topics">
         <i class="fa fa-list-ol"></i>
-        <span class="sidebar-mini-hide">Đề tài hướng dẫn</span>
+        <span class="sidebar-mini-hide">Sinh viên tham gia</span>
     </a>
 </li>
 <li>

@@ -31,15 +31,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($topics as $topic)
+                        @foreach ($students as $student)
                             <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
-                                <td>{{ $topic->student->full_name }}</td>
-                                <td style="max-width: 250px">{{ $topic->name }}</td>
+                                <td>{{ $student->full_name }}</td>
+                                <td style="max-width: 250px">{{ $student->name }}</td>
                                 <td style="max-width: 300px;" class="td-description"
                                     data-toggle="popover"
                                     data-placement="bottom"
-                                    data-content="{{ $topic->description }}">{{ $topic->description }}
+                                    data-content="{{ $student->description }}">{{ $student->description }}
                                 </td>
                                 <td class="text-center"><span class="label label-info">Approved</span></td>
                             </tr>
