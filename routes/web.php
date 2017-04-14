@@ -30,7 +30,6 @@ Route::group(['middleware' => ['auth', 'student']], function() {
     Route::get('/home', function () {
         return view('student.home');
     });
-    Route::get('/topic-registration', 'Student\TopicController@index');
     Route::get('/teachers-info', 'Student\TeacherController@index');
     Route::post('/teacher-student/{id}', 'Student\TeacherController@store')->name('teacher-student');
     Route::get('/register-status', 'Student\RegisterController@index');
@@ -47,7 +46,6 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/pending-topics', 'Teacher\TopicController@pending_topics')->name('pending-topics');
     Route::put('/approve-topic/{id}', 'Teacher\TopicController@approve')->name('approve-topic');
     Route::put('/reject-topic/{id}', 'Teacher\TopicController@reject')->name('reject-topic');
-    Route::post('/add-topic', 'Teacher\TopicController@store')->name('topic.store');
     Route::delete('/delete-topic/{id}', 'Teacher\TopicController@destroy')->name('topic.delete');
     Route::get('/research-topics', 'Teacher\ResearchController@research_topics')->name('research-topics');
     Route::post('/add-research', 'Teacher\ResearchController@store')->name('research.store');
@@ -56,4 +54,8 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/students-register', 'Teacher\StudentController@students_register')->name('students-register');
     Route::put('/approve-student/{id}', 'Teacher\StudentController@approve')->name('approve-student');
     Route::delete('/reject-student/{id}', 'Teacher\StudentController@reject')->name('reject-student');
+
+    // Student Topic
+    Route::get('/add-topic-{student_id}', 'Teacher\StudentTopicController@create')->name('topic.create');;
+    Route::post('/add-topic/{student_id}', 'Teacher\StudentTopicController@store')->name('topic.store');
 });

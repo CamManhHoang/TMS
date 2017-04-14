@@ -26,13 +26,8 @@ class Student extends Model
         return $this->belongsToMany(Teacher::class)->withTimestamps()->withPivot('teacher_approve', 'student_approve');
     }
 
-    public function topics()
+    public function topic()
     {
-        return $this->hasMany(Topic::class);
-    }
-
-    public function topic_approved()
-    {
-        return Auth::user()->student->topics->contains('approve', 1);
+        return $this->hasOne(Topic::class);
     }
 }

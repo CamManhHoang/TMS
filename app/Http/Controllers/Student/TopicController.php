@@ -43,7 +43,7 @@ class TopicController extends Controller
     {
         $user = Auth::user();
 
-        $topic = $user->student->topics->where('approve', 1)->first();
+        $topic = $user->student->topic;
 
         return view('student.my-topic', compact('topic'));
     }

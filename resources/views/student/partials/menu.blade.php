@@ -19,11 +19,6 @@
                     <i class="fa fa-users push-5-r"></i>Thông tin giảng viên
                 </a>
             </li>
-            <li class="{{ Request::is('topic-registration') ? 'active' : '' }}">
-                <a href="/topic-registration">
-                    <i class="fa fa-briefcase push-5-r"></i>Đăng ký đề tài
-                </a>
-            </li>
             <li class="{{ Request::is('register-status') ? 'active' : '' }}">
                 <a href="/register-status">
                     <i class="fa fa-book push-5-r"></i>Trạng thái đăng ký

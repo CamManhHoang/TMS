@@ -13,21 +13,24 @@
                 <div class="block-header">
                     <ul class="block-options">
                         <li>
-                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                            <button type="button" data-toggle="block-option" data-action="refresh_toggle"
+                                    data-action-mode="demo"><i class="si si-refresh"></i></button>
                         </li>
                     </ul>
                     <h3 class="block-title">Danh sách đề tài hướng dẫn</h3>
                 </div>
 
                 <div class="block-content">
-                    <table id="topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
+                    <table id="topics"
+                           class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                         <thead>
                         <tr>
                             <th>STT</th>
                             <th>Họ Tên Sinh viên</th>
                             <th>Tên đề tài</th>
                             <th>Mô tả</th>
-                            <th class="text-center">Trạng thái</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,13 +38,21 @@
                             <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
                                 <td>{{ $student->full_name }}</td>
-                                <td style="max-width: 250px">{{ $student->name }}</td>
-                                <td style="max-width: 300px;" class="td-description"
+                                <td>{!! $student->topic->name or '<span class="label label-info">Chưa có</span>' !!}</td>
+                                <td style="max-width: 250px;" class="td-description"
                                     data-toggle="popover"
                                     data-placement="bottom"
-                                    data-content="{{ $student->description }}">{{ $student->description }}
+                                    data-content="{{ $student->topic->description or ''}}">{{ $student->topic->description or ''}}
                                 </td>
-                                <td class="text-center"><span class="label label-info">Approved</span></td>
+                                <td><span class="label label-primary">Approved</span></td>
+                                <td class="text-center">
+                                    @if(!$student->topic)
+                                        <a href="{{ route('topic.create', $student->id) }}" class="btn btn-xs btn-info" data-toggle="tooltip" title=""
+                                                data-original-title="Thêm đề tài khóa luận cho sinh viên"><i
+                                                    class="fa fa fa-plus"></i> Thêm đề tài
+                                        </a>
+                                    @endif
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
