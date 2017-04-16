@@ -6,34 +6,45 @@
 
 @section('content')
     <div class="block">
-        <div class="block-header">
-            <ul class="block-options">
-                <li>
-                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                </li>
-            </ul>
-            <h3 class="block-title">Weekly Overview</h3>
+        <div class="col-sm-6 col-lg-3">
+            <a class="block block-link-hover1 text-center" href="/teachers-info">
+                <div class="block-content block-content-full bg-amethyst-dark">
+                    <i class="fa fa-users fa-5x text-white"></i>
+                </div>
+                <div class="block-content block-content-full block-content-mini">
+                    <strong>Thông tin giảng viên</strong>
+                </div>
+            </a>
         </div>
-
-        <div class="block-content text-center">
-            <div class="row items-push text-center">
-                <div class="col-xs-6 col-lg-3">
-                    <div class="push-10"><i class="si si-graph fa-2x"></i></div>
-                    <div class="h5 font-w300 text-muted">+ 205 Sales</div>
+        <div class="col-sm-6 col-lg-3">
+            <a class="block block-link-hover1 text-center" href="/register-status">
+                <div class="block-content block-content-full bg-primary">
+                    <i class="fa fa-book fa-5x text-white"></i>
                 </div>
-                <div class="col-xs-6 col-lg-3">
-                    <div class="push-10"><i class="si si-users fa-2x"></i></div>
-                    <div class="h5 font-w300 text-muted">+ 25% Clients</div>
+                <div class="block-content block-content-full block-content-mini">
+                    <strong>Trạng thái đăng ký</strong>
                 </div>
-                <div class="col-xs-6 col-lg-3 visible-lg">
-                    <div class="push-10"><i class="si si-star fa-2x"></i></div>
-                    <div class="h5 font-w300 text-muted">+ 10 Ratings</div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a class="block block-link-hover1 text-center" href="/my-topic">
+                <div class="block-content block-content-full bg-modern-dark">
+                    <i class="fa fa-bell fa-5x text-white"></i>
                 </div>
-                <div class="col-xs-6 col-lg-3 visible-lg">
-                    <div class="push-10"><i class="si si-share fa-2x"></i></div>
-                    <div class="h5 font-w300 text-muted">+ 35 Followers</div>
+                <div class="block-content block-content-full block-content-mini">
+                    <strong>Trạng thái đề tài</strong>
                 </div>
-            </div>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <a class="block block-link-hover1 text-center" href="/settings">
+                <div class="block-content block-content-full bg-info">
+                    <i class="fa fa-cogs fa-5x text-white"></i>
+                </div>
+                <div class="block-content block-content-full block-content-mini">
+                    <strong>Cài đặt</strong>
+                </div>
+            </a>
         </div>
     </div>
 @endsection
