@@ -17,46 +17,89 @@
     <!-- Page Content -->
     <div class="content">
         <div class="row">
-            <div class="col-sm-6 col-lg-3">
-                <a class="block block-link-hover1 text-center" href="/research-topics">
-                    <div class="block-content block-content-full bg-amethyst-dark">
-                        <i class="fa fa-book fa-5x text-white"></i>
-                    </div>
-                    <div class="block-content block-content-full block-content-mini">
-                        <strong>Hướng nghiên cứu</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <a class="block block-link-hover1 text-center" href="/student-topics">
-                    <div class="block-content block-content-full bg-primary">
-                        <i class="fa fa-list-ul fa-5x text-white"></i>
-                    </div>
-                    <div class="block-content block-content-full block-content-mini">
-                        <strong>Đề tài hướng dẫn</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <a class="block block-link-hover1 text-center" href="/pending-topics">
-                    <div class="block-content block-content-full bg-modern-dark">
-                        <i class="fa fa-list-alt fa-5x text-white"></i>
-                    </div>
-                    <div class="block-content block-content-full block-content-mini">
-                        <strong>Đề tài chờ xử lý</strong>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <a class="block block-link-hover1 text-center" href="/teacher-info">
-                    <div class="block-content block-content-full bg-info">
-                        <i class="si si-badge fa-5x text-white"></i>
-                    </div>
-                    <div class="block-content block-content-full block-content-mini">
-                        <strong>Thông tin cá nhân</strong>
-                    </div>
-                </a>
-            </div>
+            @if(Auth::user()->is_teacher())
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/research-topics">
+                        <div class="block-content block-content-full bg-amethyst-dark">
+                            <i class="fa fa-book fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Hướng nghiên cứu</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/student-topics">
+                        <div class="block-content block-content-full bg-primary">
+                            <i class="fa fa-list-ul fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Đề tài hướng dẫn</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/pending-topics">
+                        <div class="block-content block-content-full bg-modern-dark">
+                            <i class="fa fa-list-alt fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Đề tài chờ xử lý</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/teacher-info">
+                        <div class="block-content block-content-full bg-info">
+                            <i class="si si-badge fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Thông tin cá nhân</strong>
+                        </div>
+                    </a>
+                </div>
+            @elseif(Auth::user()->is_admin())
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/departments">
+                        <div class="block-content block-content-full bg-amethyst-dark">
+                            <i class="si si-badge fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Quản lý bộ môn</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/teachers">
+                        <div class="block-content block-content-full bg-primary">
+                            <i class="si si-users fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Quản lý giảng viên</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/students">
+                        <div class="block-content block-content-full bg-modern-dark">
+                            <i class="fa fa-users fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Quản lý sinh viên</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/system-settings">
+                        <div class="block-content block-content-full bg-info">
+                            <i class="si si-settings fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Cài đặt hệ thống</strong>
+                        </div>
+                    </a>
+                </div>
+            @endif
         </div>
     </div>
     <!-- END Page Content -->

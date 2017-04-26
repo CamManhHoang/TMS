@@ -38,7 +38,7 @@
                             <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
                                 <td>{{ $student->full_name }}</td>
-                                <td>{!! $student->topic->name or '<span class="label label-info">Chưa có</span>' !!}</td>
+                                <td style="max-width: 250px;" >{!! $student->topic->name or '<span class="label label-info">Chưa có</span>' !!}</td>
                                 <td style="max-width: 250px;" class="td-description"
                                     data-toggle="popover"
                                     data-placement="bottom"

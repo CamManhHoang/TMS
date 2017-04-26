@@ -24,12 +24,6 @@
         <span class="sidebar-mini-hide">Sinh viên đăng ký</span>
     </a>
 </li>
-<li>
-    <a class="{{ Request::is('modify-topics') ? 'active' : '' }}" href="/modify-topics">
-        <i class="fa fa-edit"></i>
-        <span class="sidebar-mini-hide">Yêu cầu sửa đề tài</span>
-    </a>
-</li>
 <li class="nav-main-heading"><span class="sidebar-mini-hide">Cài đặt</span></li>
 <li>
     <a class="{{ Request::is('edit-profile') ? 'active' : '' }}" href="/edit-profile">
