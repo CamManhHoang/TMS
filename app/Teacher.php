@@ -45,15 +45,15 @@ class Teacher extends Model
 
     public function count_student_topics()
     {
-        return $this->topics
-            ->where('approve', true)
-            ->where('student_id', '<>', 0)->count();
+        return $this->students()
+            ->where('teacher_approve', true)
+            ->where('student_approve', true)->count();
     }
 
-    public function count_pending_topics()
+    public function count_students_register()
     {
-        return $this->topics
-            ->where('approve', false)
-            ->where('student_id', '<>', 0)->count();
+        return $this->students()
+            ->where('teacher_approve', false)
+            ->where('student_approve', false)->count();
     }
 }

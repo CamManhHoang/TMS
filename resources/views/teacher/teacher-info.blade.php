@@ -35,20 +35,20 @@
                             <ul class="nav nav-pills nav-stacked push">
                                 <li>
                                     <a href="/research-topics">
-                                        <span class="badge pull-right">{{ $teacher->topics->count() }}</span><i
+                                        <span class="badge pull-right">{{ $teacher->researches->count() }}</span><i
                                                 class="fa fa-book"></i> Hướng nghiên cứu
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/student-topics">
                                         <span class="badge pull-right">{{ $teacher->count_student_topics() }}</span><i
-                                                class="fa fa-list-ol"></i> Đề tài hướng dẫn
+                                                class="fa fa-list-ol"></i> Sinh viên tham gia
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/pending-topics">
-                                        <span class="badge pull-right">{{ $teacher->count_pending_topics() }}</span><i
-                                                class="fa fa-list-alt"></i> Đề tài chờ xử lý
+                                    <a href="/students-register">
+                                        <span class="badge pull-right">{{ $teacher->count_students_register() }}</span><i
+                                                class="fa fa-list-alt"></i> Sinh viên đăng ký
                                     </a>
                                 </li>
                             </ul>

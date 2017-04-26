@@ -11,14 +11,6 @@
         <span class="sidebar-mini-hide">Hướng nghiên cứu</span>
     </a>
 </li>
-<li>
-    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-grid"></i><span class="sidebar-mini-hide">Tables</span></a>
-    <ul>
-        <li>
-            <a href="base_tables_styles.html">Styles</a>
-        </li>
-    </ul>
-</li>
 <li class="nav-main-heading"><span class="sidebar-mini-hide">Khu vực quản trị</span></li>
 <li>
     <a class="{{ Request::is('student-topics') ? 'active' : '' }}" href="/student-topics">
