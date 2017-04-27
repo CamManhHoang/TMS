@@ -69,4 +69,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::delete('/teachers/{id}', 'Admin\TeacherController@destroy')->name('teacher.delete');
     Route::get('/teachers', 'Admin\TeacherController@index');
     Route::get('/students', 'Admin\StudentController@index');
+    Route::delete('/students/{id}', 'Admin\StudentController@destroy')->name('student.delete');
 });

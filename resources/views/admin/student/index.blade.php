@@ -40,14 +40,14 @@
                                 <td>{{ $student->email or '' }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        {{ Form::open(['method' => 'DELETE', 'route'=>['teacher.delete', $student->id], 'class' => 'float-left']) }}
+                                        {{ Form::open(['method' => 'DELETE', 'route'=>['student.delete', $student->id], 'class' => 'float-left']) }}
                                         {{ Form::button('<i class="fa fa-times"></i>', [
                                             'type' => 'submit',
                                             'class' => 'btn btn-xs btn-danger',
                                             'data-toggle' => 'tooltip',
                                             'title' => '',
-                                            'data-original-title' => 'Xóa giáo viên',
-                                            'onclick' => "return confirm('Xác nhận xóa giáo viên này khỏi hệ thống?')"
+                                            'data-original-title' => 'Xóa sinh viên',
+                                            'onclick' => "return confirm('Xác nhận xóa sinh viên này khỏi hệ thống?')"
                                             ])
                                         }}
                                         {{ Form::close() }}
