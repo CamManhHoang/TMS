@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Quản lý danh sách giáo viên
+    Quản lý danh sách sinh viên
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                 <div class="block-header">
                     <div class="block-options-simple">
                         <button class="btn btn-sm btn-success btn-rounded" type="button" data-toggle="modal"
-                                data-target="#add-teacher">
-                            <i class="fa fa-plus-circle"></i> Thêm giáo viên
+                                data-target="#add-student">
+                            <i class="fa fa-plus-circle"></i> Thêm sinh viên
                         </button>
                     </div>
-                    <h3 class="block-title">Quản lý danh sách giáo viên</h3>
+                    <h3 class="block-title">Quản lý danh sách sinh viên</h3>
                 </div>
 
                 <div class="block-content">
@@ -25,26 +25,22 @@
                         <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Tên giáo viên</th>
+                            <th>Tên sinh viên</th>
+                            <th>Mã sinh viên</th>
                             <th>Email</th>
-                            <th>Bộ môn</th>
-                            <th>Học vị</th>
                             <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($teachers as $teacher)
+                        @foreach($students as $student)
                             <tr>
                                 <td class="text-center"><strong>{{ $stt++ }}</strong></td>
-                                <td>{{ $teacher->full_name }}</td>
-                                <td>{{ $teacher->email }}</td>
-                                <td>
-                                    <a href="/departments-{{ $teacher->department->id or '' }}">{{ $teacher->department->name_vn or '' }}</a>
-                                </td>
-                                <td>Unknown</td>
+                                <td>{{ $student->full_name }}</td>
+                                <td>{{ $student->student_id }}</td>
+                                <td>{{ $student->email or '' }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        {{ Form::open(['method' => 'DELETE', 'route'=>['teacher.delete', $teacher->id], 'class' => 'float-left']) }}
+                                        {{ Form::open(['method' => 'DELETE', 'route'=>['teacher.delete', $student->id], 'class' => 'float-left']) }}
                                         {{ Form::button('<i class="fa fa-times"></i>', [
                                             'type' => 'submit',
                                             'class' => 'btn btn-xs btn-danger',

@@ -10,7 +10,6 @@ use Mockery\Exception;
 
 class TeacherController extends Controller
 {
-
     public function index()
     {
         $stt = 1;
