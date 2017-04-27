@@ -62,7 +62,9 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
 
 //Admin Section
 Route::group(['middleware' => ['auth', 'admin']], function () {
-   Route::get('departments', 'Admin\DepartmentController@index');
+    Route::get('/departments', 'Admin\DepartmentController@index');
     Route::post('/departments', 'Admin\DepartmentController@store')->name('department.store');
     Route::delete('/departments/{id}', 'Admin\DepartmentController@destroy')->name('department.delete');
+    Route::get('/departments-{id}', 'Admin\DepartmentController@show')->name('department.show');
+    Route::delete('/teachers/{id}', 'Admin\TeacherController@destroy')->name('teacher.delete');
 });

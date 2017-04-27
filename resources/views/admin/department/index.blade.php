@@ -35,7 +35,7 @@
                             @foreach($departments as $department)
                                 <tr>
                                     <td class="text-center"><strong>{{ $stt++ }}</strong></td>
-                                    <td>{{ $department->name_vn }}</td>
+                                    <td><a href="/departments-{{ $department->id }}">{{ $department->name_vn }}</a></td>
                                     <td>{{ $department->name_en }}</td>
                                     <td style="max-width: 250px;">
                                         {{ $department->description }}

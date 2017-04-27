@@ -1,6 +1,6 @@
 <li class="nav-main-heading"><span class="sidebar-mini-hide">Khu vực quản trị</span></li>
 <li>
-    <a class="{{ Request::is('departments') ? 'active' : '' }}" href="/departments">
+    <a class="{{ Request::is('departments*') ? 'active' : '' }}" href="/departments">
         <i class="si si-badge"></i>
         <span class="sidebar-mini-hide">Quản lý bộ môn</span>
     </a>

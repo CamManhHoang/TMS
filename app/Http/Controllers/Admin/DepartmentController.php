@@ -34,6 +34,14 @@ class DepartmentController extends Controller
         return back();
     }
 
+    public function show($id)
+    {
+        $stt = 1;
+        $department = Department::findOrFail($id);
+
+        return view('admin.department.show', compact('department', 'stt'));
+    }
+
     public function destroy($id)
     {
         $department = Department::findOrFail($id);
