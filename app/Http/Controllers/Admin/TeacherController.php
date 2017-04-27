@@ -10,6 +10,15 @@ use Mockery\Exception;
 
 class TeacherController extends Controller
 {
+
+    public function index()
+    {
+        $stt = 1;
+        $teachers = Teacher::all();
+
+        return view('admin.teacher.index', compact('teachers', 'stt'));
+    }
+
     public function destroy($id)
     {
         $teacher = Teacher::findOrFail($id);

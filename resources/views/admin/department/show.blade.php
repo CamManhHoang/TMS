@@ -58,5 +58,4 @@
 
     </div>
     <!-- END Page Content
-    @include('admin.modals.add-department')
 @endsection
