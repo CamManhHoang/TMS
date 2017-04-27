@@ -38,7 +38,7 @@
                                 <td style="max-width: 300px">
                                     <strong>{{ $teacher->full_name }}</strong>
                                 </td>
-                                <td>{{ $teacher->department->name_vn }}</td>
+                                <td>{{ $teacher->department->name_vn or ''}}</td>
                                 <td>Unknown</td>
                                 <td>
                                     @foreach ($teacher->researches as $research)

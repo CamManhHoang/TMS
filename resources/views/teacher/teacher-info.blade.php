@@ -83,7 +83,7 @@
                                 aliquam laborum quam voluptate.</p>
                         </div>
                         <p>
-                            <strong>Nơi công tác</strong>: {{ $teacher->department->name_vn }}
+                            <strong>Nơi công tác</strong>: {{ $teacher->department->name_vn or '' }}
                         </p>
                         <p>
                             <strong>Email</strong>: {{ $teacher->user->email }}

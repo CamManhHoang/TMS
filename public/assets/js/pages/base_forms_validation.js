@@ -87,8 +87,8 @@ var BaseFormValidation = function() {
             },
             messages: {
                 'name': {
-                    required: 'Phần tên đề tài là bắt buộc',
-                    minlength: 'Tên đề tài cần ít nhất 6 ký tự trở lên.'
+                    required: 'Phần tên là bắt buộc',
+                    minlength: 'Phần tên cần ít nhất 6 ký tự trở lên.'
                 },
                 'val-email': 'Please enter a valid email address',
                 'val-password': {
@@ -103,7 +103,7 @@ var BaseFormValidation = function() {
                 'val-select2': 'Please select a value!',
                 'val-select2-multiple': 'Please select at least 2 values!',
                 'description': {
-                    required: 'Phần mô tả bắt buộc',
+                    required: 'Phần mô tả là bắt buộc',
                     minlength: 'Viết mô tả ít nhất 6 ký tự trở lên.'
                 },
                 'val-skill': 'Please select a skill!',

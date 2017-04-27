@@ -59,3 +59,10 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     Route::get('/add-topic-{student_id}', 'Teacher\StudentTopicController@create')->name('topic.create');;
     Route::post('/add-topic/{student_id}', 'Teacher\StudentTopicController@store')->name('topic.store');
 });
+
+//Admin Section
+Route::group(['middleware' => ['auth', 'admin']], function () {
+   Route::get('departments', 'Admin\DepartmentController@index');
+    Route::post('/departments', 'Admin\DepartmentController@store')->name('department.store');
+    Route::delete('/departments/{id}', 'Admin\DepartmentController@destroy')->name('department.delete');
+});
