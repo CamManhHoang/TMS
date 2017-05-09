@@ -29,12 +29,13 @@
                             <th>Họ Tên Sinh viên</th>
                             <th>Tên đề tài</th>
                             <th>Mô tả</th>
-                            <th>Trạng thái</th>
+                            <th>Trạng thái hồ sơ</th>
                             <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($students as $student)
+                            @include('teacher.modals.view_thesis_file')
                             <tr>
                                 <td><strong>{{ $stt++ }}</strong></td>
                                 <td>{{ $student->full_name }}</td>
@@ -44,7 +45,16 @@
                                     data-placement="bottom"
                                     data-content="{{ $student->topic->description or ''}}">{{ $student->topic->description or ''}}
                                 </td>
-                                <td><span class="label label-primary">Approved</span></td>
+                                <td>
+                                    @if($student->thesis_file)
+                                        <a class="btn btn-sm btn-info btn-rounded" type="button" data-toggle="modal"
+                                           data-target="#view-thesis">
+                                            <i class="fa fa-eye"></i> Xem khóa luận
+                                        </a>
+                                    @else
+                                        <span class="label label-primary">Chưa nạp</span>
+                                    @endif
+                                </td>
                                 <td class="text-center">
                                     @if(!$student->topic)
                                         <a href="{{ route('topic.create', $student->id) }}" class="btn btn-xs btn-info" data-toggle="tooltip" title=""
