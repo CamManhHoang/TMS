@@ -66,9 +66,11 @@
                                 {{ $topic->student->thesis_file ? 'Đã gửi hồ sơ' : 'Chưa gửi hồ sơ' }}
                             </p>
                             @if($topic->student->thesis_file)
-                                <a class="btn btn-sm btn-info btn-rounded" type="button" href="/view-thesis-file">
+                                <a class="btn btn-sm btn-info btn-rounded" type="button" data-toggle="modal"
+                                   data-target="#view-thesis">
                                     <i class="fa fa-eye"></i> Xem khóa luận
                                 </a>
+
                                 <button class="btn btn-sm btn-primary btn-rounded" type="button" data-toggle="modal"
                                 data-target="#add_thesis_file">
                                 <i class="fa fa-edit"></i> Chỉnh sửa khóa luận
@@ -86,5 +88,6 @@
         </div>
 
         @include('student.partials.add_thesis_file')
+        @include('student.partials.view_thesis_file')
     @endif
 @endsection

@@ -10,7 +10,7 @@ class ThesisController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            "thesis_file" => "required|mimes:pdf,doc,docx|max:20000"
+            "thesis_file" => "required|mimes:pdf|max:20000"
         ]);
 
         $student = \Auth::user()->student;
