@@ -62,11 +62,29 @@
                         <i class="fa fa-file-pdf-o list-timeline-icon bg-city"></i>
                         <div class="list-timeline-content">
                             <p class="font-w600">Trạng thái hồ sơ</p>
-                            <p class="font-s13">{{ $topic->docs_status ? 'Đã gửi hồ sơ' : 'Chưa gửi hồ sơ' }}</p>
+                            <p class="font-s13" style="float:left; margin-right: 20px; margin-bottom: 50px; padding-top: 5px;">
+                                {{ $topic->student->thesis_file ? 'Đã gửi hồ sơ' : 'Chưa gửi hồ sơ' }}
+                            </p>
+                            @if($topic->student->thesis_file)
+                                <a class="btn btn-sm btn-info btn-rounded" type="button" href="/view-thesis-file">
+                                    <i class="fa fa-eye"></i> Xem khóa luận
+                                </a>
+                                <button class="btn btn-sm btn-primary btn-rounded" type="button" data-toggle="modal"
+                                data-target="#add_thesis_file">
+                                <i class="fa fa-edit"></i> Chỉnh sửa khóa luận
+                                </button>
+                            @else
+                                <button class="btn btn-sm btn-primary btn-rounded" type="button" data-toggle="modal"
+                                        data-target="#add_thesis_file">
+                                    <i class="fa fa-plus-circle"></i> Nạp khóa luận
+                                </button>
+                            @endif
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
+
+        @include('student.partials.add_thesis_file')
     @endif
 @endsection

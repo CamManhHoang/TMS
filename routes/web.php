@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth', 'student']], function() {
     Route::put('/approve-teacher/{id}', 'Student\RegisterController@approve')->name('approve-teacher');
     Route::get('/my-topic', 'Student\TopicController@show');
     Route::put('/topic-register/{id}', 'Student\TopicController@register_topic')->name('register-topic');
+    Route::put('/add_thesis_file', 'Student\ThesisController@store')->name('thesis.store');
 });
 
 //Teacher Section
