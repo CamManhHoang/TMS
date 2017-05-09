@@ -23,6 +23,8 @@ class CreateStudentsTable extends Migration
             $table->string('full_name');
             $table->string('email');
             $table->integer('user_id')->unsigned();
+            $table->integer('council_id')->unsigned();
+            $table->string('thesis_file');
             $table->timestamps();
         });
     }

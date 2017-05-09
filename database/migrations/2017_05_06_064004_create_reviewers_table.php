@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTopicsTable extends Migration
+class CreateReviewersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateTopicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('topics', function (Blueprint $table) {
+        Schema::create('reviewers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('description')->nullable();
+            $table->string('reviewer_name');
             $table->integer('teacher_id')->unsigned();
-            $table->integer('student_id')->unsigned();
-            $table->boolean('thesis_submit_status')->default(false);
-            $table->boolean('approve')->default(false);
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateTopicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('topics');
+        Schema::dropIfExists('reviewers');
     }
 }
