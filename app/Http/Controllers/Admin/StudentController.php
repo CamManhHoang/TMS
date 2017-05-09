@@ -23,7 +23,7 @@ class StudentController extends Controller
         $student = Student::findOrFail($id);
         try {
             $student->teachers()->detach();
-            $student->topic->delete();
+            $student->topic()->delete();
             $student->user()->delete();
             $student->delete();
         }
@@ -32,7 +32,7 @@ class StudentController extends Controller
                 'Có lỗi xảy ra')->autoclose(2500);
             return back();
         }
-        Alert::success('Xoá giáo viên thành công!',
+        Alert::success('Xoá sinh viên thành công!',
             'Thành công')->autoclose(2500);
         return back();
     }
