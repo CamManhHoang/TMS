@@ -18,6 +18,20 @@
     </a>
 </li>
 
+<li class="nav-main-heading"><span class="sidebar-mini-hide">Quản lý khóa luận</span></li>
+<li>
+    <a class="{{ Request::is('councils*') ? 'active' : '' }}" href="/councils">
+        <i class="fa fa-th-large"></i>
+        <span class="sidebar-mini-hide">Hội đồng bảo vệ</span>
+    </a>
+</li>
+<li>
+    <a class="{{ Request::is('students-defense*') ? 'active' : '' }}" href="/students-defense">
+        <i class="fa fa-group"></i>
+        <span class="sidebar-mini-hide">DS sinh viên BVKL</span>
+    </a>
+</li>
+
 <li class="nav-main-heading"><span class="sidebar-mini-hide">Khu vực thiết lập</span></li>
 <li>
     <a class="{{ Request::is('system-settings') ? 'active' : '' }}" href="/system-settings">

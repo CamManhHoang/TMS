@@ -84,11 +84,27 @@ var BaseFormValidation = function() {
                 'val-terms': {
                     required: true
                 }
+                ,
+                'chairman': {
+                    required: true
+                }
+                ,
+                'secretary': {
+                    required: true
+                }
             },
             messages: {
                 'name': {
                     required: 'Phần tên là bắt buộc',
                     minlength: 'Phần tên cần ít nhất 6 ký tự trở lên.'
+                },
+                'chairman': {
+                    required: 'Phần tên chủ tịch hội đồng là bắt buộc',
+                    minlength: 'Phần tên chủ tịch hội đồng cần ít nhất 6 ký tự trở lên.'
+                },
+                'secretary': {
+                    required: 'Phần tên thư ký hội đồng là bắt buộc',
+                    minlength: 'Phần tên thư ký hội đồng cần ít nhất 6 ký tự trở lên.'
                 },
                 'val-email': 'Please enter a valid email address',
                 'val-password': {

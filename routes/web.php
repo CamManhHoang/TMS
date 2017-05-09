@@ -70,4 +70,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/teachers', 'Admin\TeacherController@index');
     Route::get('/students', 'Admin\StudentController@index');
     Route::delete('/students/{id}', 'Admin\StudentController@destroy')->name('student.delete');
+    Route::get('/councils', 'Admin\CouncilController@index');
+    Route::post('/councils', 'Admin\CouncilController@store')->name('council.store');
 });

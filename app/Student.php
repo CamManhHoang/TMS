@@ -30,4 +30,9 @@ class Student extends Model
     {
         return $this->hasOne(Topic::class);
     }
+
+    public function council()
+    {
+        return $this->belongsTo(Council::class);
+    }
 }
