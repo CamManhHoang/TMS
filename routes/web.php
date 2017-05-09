@@ -72,6 +72,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::delete('/students/{id}', 'Admin\StudentController@destroy')->name('student.delete');
     Route::get('/councils', 'Admin\CouncilController@index');
     Route::post('/councils', 'Admin\CouncilController@store')->name('council.store');
+    Route::get('/councils-{id}', 'Admin\CouncilController@show')->name('council.show');
     Route::get('/students-defense', 'Admin\DefenseController@index');
     Route::get('/add-council-student-{student_id}', 'Admin\DefenseController@get_add_council_student')->name('get_add_council_student');;
     Route::put('/add-council-student/{student_id}', 'Admin\DefenseController@add_council_student')->name('add_council_student');

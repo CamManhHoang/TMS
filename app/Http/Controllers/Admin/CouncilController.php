@@ -39,8 +39,8 @@ class CouncilController extends Controller
     public function show($id)
     {
         $stt = 1;
-        $department = Department::findOrFail($id);
+        $council = Council::findOrFail($id);
 
-        return view('admin.department.show', compact('department', 'stt'));
+        return view('admin.council.show', compact('council', 'stt'));
     }
 }

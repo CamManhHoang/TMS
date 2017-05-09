@@ -36,7 +36,7 @@
                             @foreach($councils as $council)
                                 <tr>
                                     <td class="text-center"><strong>{{ $stt++ }}</strong></td>
-                                        <td><a href="/departments-{{ $council->id }}">{{ $council->council_name }}</a></td>
+                                        <td><a href="/councils-{{ $council->id }}">{{ $council->council_name }}</a></td>
                                     <td>{{ $council->chairman }}</td>
                                     <td style="max-width: 250px;">
                                         {{ $council->secretary }}
