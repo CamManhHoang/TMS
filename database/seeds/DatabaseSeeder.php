@@ -448,8 +448,8 @@ class DatabaseSeeder extends Seeder
 (7, 'Bộ môn Công nghệ quang tử', 'Department of Nanophotonics Technology', NULL),
 (8, 'Bộ môn Vật liệu và linh kiện từ tính nano', 'Department of Nano Magnetic Materials and Devices', NULL),
 (9, 'Bộ môn Vật liệu và linh kiện bán dẫn nano', 'Department of Nano Semiconductor Materials and Devices', NULL)");
-//        $this->call(UsersTableSeeder::class);
-//        $this->call(TeachersTableSeeder::class);
-//        $this->call(ResearchesTableSeeder::class);
+       $this->call(UsersTableSeeder::class);
+       $this->call(TeachersTableSeeder::class);
+       $this->call(ResearchesTableSeeder::class);
     }
 }
