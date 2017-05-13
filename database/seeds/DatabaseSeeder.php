@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement("INSERT INTO `users` (`id`, `password`, `email`) VALUES
+        DB::statement("INSERT INTO 'users' ('id', 'password', 'email') VALUES
 (1, 'e10adc3949ba59abbe56e057f20f883e', 'admin@vnu.edu.vn'),
 (2, 'e10adc3949ba59abbe56e057f20f883e', 'nnbinh@vnu.edu.vn'),
 (3, 'e10adc3949ba59abbe56e057f20f883e', 'nguyenthanhthuy@vnu.edu.vn'),
@@ -2838,7 +2838,7 @@ class DatabaseSeeder extends Seeder
 
         DB::statement("UPDATE users SET username = SUBSTRING_INDEX(email, '@', 1)");
 
-        DB::statement("INSERT INTO `students` (`id`, `created_on`, `created_by`, `private`, `active`, `student_id`, `full_name`, `email`, `user_id`) VALUES
+        DB::statement("INSERT INTO 'students' ('id', 'created_on', 'created_by', 'private', 'active', 'student_id', 'full_name', 'email', 'user_id') VALUES
 (1, '2014-08-04 08:46:02', 1, 0, 1, '13020002', 'Cao Vũ Việt Anh', 'anhcvv_58@vnu.edu.vn', 195),
 (2, '2014-09-01 00:00:00', 1, 0, 1, '10020000', 'Nguyễn Đức Trường An', 'anndt_55@vnu.edu.vn', 201),
 (3, '2014-09-01 00:00:00', 1, 0, 1, '10020001', 'Cao Việt Anh', 'anhcv_55@vnu.edu.vn', 202),
@@ -5466,7 +5466,7 @@ class DatabaseSeeder extends Seeder
 (2625, '2014-09-01 00:00:00', 1, 0, 1, '13020767', 'Nguyễn Thế Tùng', 'tungnt_580@vnu.edu.vn', 2824)");
 
 
-        DB::statement("INSERT INTO `teachers` (`id`, `user_id`, `email`, `full_name`, `unit_id`, `description`, `position`) VALUES
+        DB::statement("INSERT INTO 'teachers' ('id', 'user_id', 'email', 'full_name', 'unit_id', 'description', 'position') VALUES
 (2, 2, 'nnbinh@vnu.edu.vn', 'Nguyễn Ngọc Bình', '__18__', NULL, '1'),
 (3, 3, 'nguyenthanhthuy@vnu.edu.vn', 'Nguyễn Thanh Thủy', '__18__', NULL, '2'),
 (4, 4, 'thoaltp@vnu.edu.vn', 'Lê Thị Phương Thoa', '__12__', NULL, '4'),
@@ -5667,7 +5667,7 @@ class DatabaseSeeder extends Seeder
 (199, 2826, 'dangph@vnu.edu.vn', 'Phạm Hải Đăng', '__1__', NULL, '')");
 
 
-        DB::statement("INSERT INTO `departments` (`id`, `name_vn`, `name_en`, `description`) VALUES
+        DB::statement("INSERT INTO 'departments' ('id', 'name_vn', 'name_en', 'description') VALUES
 (1, 'Bộ môn Các hệ thống thông tin', 'Department of Information Systems', NULL),
 (2, 'Bộ môn Công nghệ phần mềm', 'Department of Software Engineering', NULL),
 (3, 'Bộ môn Khoa học máy tính', 'Department of Computer Science',  NULL),
