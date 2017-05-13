@@ -2836,7 +2836,7 @@ class DatabaseSeeder extends Seeder
 (2825, 'e10adc3949ba59abbe56e057f20f883e', 'thanhvtp@vnu.edu.vn'),
 (2826, 'e10adc3949ba59abbe56e057f20f883e', 'dangph@vnu.edu.vn')");
 
-        DB::statement("UPDATE users SET username = SUBSTRING_INDEX(email, '@', 1)");
+//        DB::statement("UPDATE users SET username = SUBSTRING_INDEX(email, '@', 1)");
 
         DB::statement("INSERT INTO students (id, created_on, created_by, private, active, student_id, full_name, email, user_id) VALUES
 (1, '2014-08-04 08:46:02', 1, 0, 1, '13020002', 'Cao Vũ Việt Anh', 'anhcvv_58@vnu.edu.vn', 195),
