@@ -38,7 +38,7 @@
                         <tbody>
                             @foreach($councils as $council)
                                 <tr>
-                                    <td><strong>{{ $council->id }}</strong></td>
+                                    <td><strong>{{ $stt++ }}</strong></td>
                                         <td><a href="/councils-{{ $council->id }}">{{ $council->council_name }}</a></td>
                                     <td>{{ $council->chairman }}</td>
                                     <td style="max-width: 250px;">
