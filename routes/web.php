@@ -38,6 +38,10 @@ Route::group(['middleware' => ['auth', 'student']], function() {
     Route::get('/my-topic', 'Student\TopicController@show');
     Route::put('/topic-register/{id}', 'Student\TopicController@register_topic')->name('register-topic');
     Route::put('/add_thesis_file', 'Student\ThesisController@store')->name('thesis.store');
+
+    //Info
+    Route::get('/edit-student-info', 'Student\StudentController@edit')->name('student.edit');
+    Route::put('/edit-student-info', 'Student\StudentController@update')->name('student.update');
 });
 
 //Teacher Section

@@ -35,4 +35,21 @@ class Student extends Model
     {
         return $this->belongsTo(Council::class);
     }
+
+    public function class_uet()
+    {
+        if ($this->class == 1) {
+            echo ''?>
+            CA
+            <?php
+        } else if ($this->class == 2) {
+            echo ''?>
+            CLC
+            <?php
+        } else if ($this->class == 3) {
+            echo ''?>
+            Chuẩn
+            <?php
+        }
+    }
 }

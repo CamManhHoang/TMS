@@ -29,9 +29,9 @@
                     <i class="fa fa-bell"></i> Trạng thái đề tài
                 </a>
             </li>
-            <li class="{{ Request::is('settings') ? 'active' : '' }}">
-                <a href="/settings">
-                    <i class="fa fa-cog push-5-r"></i>Cài đặt
+            <li class="{{ Request::is('edit-student-info') ? 'active' : '' }}">
+                <a href="/edit-student-info">
+                    <i class="fa fa-cog push-5-r"></i>Cập nhật thông tin
                 </a>
             </li>
         </ul>

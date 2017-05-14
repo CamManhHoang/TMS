@@ -34,6 +34,11 @@
                                 <label>Mã số sinh viên</label>
                                 <div class="form-control-static font-w700">{{ Auth::user()->student->student_id }}</div>
                             </div>
+                            <br>
+                            <div class="col-xs-12">
+                                <label>Hệ đào tạo</label>
+                                <div class="form-control-static font-w700">{{ Auth::user()->student->class_uet() }}</div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">

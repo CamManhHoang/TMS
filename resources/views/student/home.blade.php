@@ -37,12 +37,12 @@
             </a>
         </div>
         <div class="col-sm-6 col-lg-3">
-            <a class="block block-link-hover1 text-center" href="/settings">
+            <a class="block block-link-hover1 text-center" href="/edit-student-info">
                 <div class="block-content block-content-full bg-info">
                     <i class="fa fa-cogs fa-5x text-white"></i>
                 </div>
                 <div class="block-content block-content-full block-content-mini">
-                    <strong>Cài đặt</strong>
+                    <strong>Cập nhật thông tin</strong>
                 </div>
             </a>
         </div>
