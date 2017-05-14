@@ -21,6 +21,7 @@
                             <th>STT</th>
                             <th>Tên sinh viên</th>
                             <th>Tên đề tài</th>
+                            <th>Lớp đào tạo</th>
                             <th>Giáo viên hướng dẫn</th>
                             <th>Giáo viên phản biện</th>
                             <th>Hội đồng</th>
@@ -38,6 +39,7 @@
                                     data-content="{{ $student->topic->name }}">{{ $student->topic->name }}
                                 </td>
                                 <p style="display: none">{{ $teacher = $student->teachers()->where('student_approve', 1)->get() }}</p>
+                                <td>{{ $student->class_uet() }}</td>
                                 <td>{{ $teacher[0]->full_name  }}</td>
                                 <td>
                                     {!! $student->reviewer->name or '<span class="label label-info">Chưa có</span>' !!}
