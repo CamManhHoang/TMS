@@ -59,6 +59,10 @@ Route::group(['middleware' => ['auth', 'teacher']], function() {
     // Student Topic
     Route::get('/add-topic-{student_id}', 'Teacher\StudentTopicController@create')->name('topic.create');;
     Route::post('/add-topic/{student_id}', 'Teacher\StudentTopicController@store')->name('topic.store');
+
+    //Info
+    Route::get('/edit-profile', 'Teacher\TeacherController@edit')->name('teacher.edit');
+    Route::put('/edit-profile', 'Teacher\TeacherController@update')->name('teacher.update');
 });
 
 //Admin Section

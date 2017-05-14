@@ -34,12 +34,6 @@
                         <div class="block-content">
                             <ul class="nav nav-pills nav-stacked push">
                                 <li>
-                                    <a href="/research-topics">
-                                        <span class="badge pull-right">{{ $teacher->researches->count() }}</span><i
-                                                class="fa fa-book"></i> Hướng nghiên cứu
-                                    </a>
-                                </li>
-                                <li>
                                     <a href="/student-topics">
                                         <span class="badge pull-right">{{ $teacher->count_student_topics() }}</span><i
                                                 class="fa fa-list-ol"></i> Sinh viên tham gia
@@ -90,6 +84,9 @@
                         </p>
                         <p>
                             <strong>Chức vụ</strong>: {{ $teacher->position }}
+                        </p>
+                        <p>
+                            <strong>Hướng nghiên cứu</strong>: {{ $teacher->research }}
                         </p>
                         <div>
                             <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square social"></i></a>

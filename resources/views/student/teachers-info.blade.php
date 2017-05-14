@@ -39,14 +39,11 @@
                                     <strong>{{ $teacher->full_name }}</strong>
                                 </td>
                                 <td>{{ $teacher->department->name_vn or ''}}</td>
-                                <td>Unknown</td>
-                                <td>
-                                    @foreach ($teacher->researches as $research)
-                                        <p class="odd-even td-description" data-toggle="popover" data-placement="bottom"
-                                           data-content="{{ $research->description }}">
-                                            <strong>{{ $research->name }}</strong>
-                                        </p>
-                                    @endforeach
+                                <td>{{ $teacher->position }}</td>
+                                <td style="max-width: 300px;" class="td-description"
+                                    data-toggle="popover"
+                                    data-placement="bottom"
+                                    data-content="{{ $teacher->research }}">{{ $teacher->research }}
                                 </td>
                                 <td>
                                     @if (! Auth::user()->student->teachers->contains($teacher->id))

@@ -5,12 +5,6 @@
         <span class="sidebar-mini-hide">Thông tin giảng viên</span>
     </a>
 </li>
-<li>
-    <a class="{{ Request::is('research-topics') ? 'active' : '' }}" href="/research-topics">
-        <i class="fa fa-book"></i>
-        <span class="sidebar-mini-hide">Hướng nghiên cứu</span>
-    </a>
-</li>
 <li class="nav-main-heading"><span class="sidebar-mini-hide">Khu vực quản trị</span></li>
 <li>
     <a class="{{ Request::is('student-topics') ? 'active' : '' }}" href="/student-topics">

@@ -19,12 +19,22 @@
         <div class="row">
             @if(Auth::user()->is_teacher())
                 <div class="col-sm-6 col-lg-3">
-                    <a class="block block-link-hover1 text-center" href="/research-topics">
+                    <a class="block block-link-hover1 text-center" href="/teacher-info">
+                        <div class="block-content block-content-full bg-info">
+                            <i class="si si-badge fa-5x text-white"></i>
+                        </div>
+                        <div class="block-content block-content-full block-content-mini">
+                            <strong>Thông tin cá nhân</strong>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <a class="block block-link-hover1 text-center" href="/edit-profile">
                         <div class="block-content block-content-full bg-amethyst-dark">
                             <i class="fa fa-book fa-5x text-white"></i>
                         </div>
                         <div class="block-content block-content-full block-content-mini">
-                            <strong>Hướng nghiên cứu</strong>
+                            <strong>Cập nhật thông tin</strong>
                         </div>
                     </a>
                 </div>
@@ -45,16 +55,6 @@
                         </div>
                         <div class="block-content block-content-full block-content-mini">
                             <strong>Đề tài chờ xử lý</strong>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <a class="block block-link-hover1 text-center" href="/teacher-info">
-                        <div class="block-content block-content-full bg-info">
-                            <i class="si si-badge fa-5x text-white"></i>
-                        </div>
-                        <div class="block-content block-content-full block-content-mini">
-                            <strong>Thông tin cá nhân</strong>
                         </div>
                     </a>
                 </div>
