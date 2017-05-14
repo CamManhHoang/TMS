@@ -24,26 +24,36 @@
                     <table id="topics" class="table table-striped table-borderless table-header-bg table-responsive table table-hover">
                         <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Tên hội đồng</th>
-                            <th>Chủ tịch hội đồng</th>
-                            <th>Thư ký hội đồng</th>
+                            <th>Mã HĐ</th>
+                            <th>Tên HĐ</th>
+                            <th>Chủ tịch HĐ</th>
+                            <th>Thư ký HĐ</th>
+                            <th>PCT</th>
+                            <th>UV</th>
                             <th>Số lượng Sinh viên</th>
+                            <th>Niên khóa</th>
                             <th>Hành động</th>
                         </tr>
                         </thead>
                         <tbody>
                             @foreach($councils as $council)
                                 <tr>
-                                    <td class="text-center"><strong>{{ $stt++ }}</strong></td>
+                                    <td><strong>{{ $council->id }}</strong></td>
                                         <td><a href="/councils-{{ $council->id }}">{{ $council->council_name }}</a></td>
                                     <td>{{ $council->chairman }}</td>
                                     <td style="max-width: 250px;">
                                         {{ $council->secretary }}
                                     </td>
+                                    <td style="max-width: 250px;">
+                                        {{ $council->vice_chairman }}
+                                    </td>
+                                    <td style="max-width: 250px;">
+                                        {{ $council->commissary }}
+                                    </td>
                                     <td class="text-center">
                                         {{ $council->students()->count() }}
                                     </td>
+                                    <td>{{ date_format($council->created_at, 'Y') }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <a href="/edit-council" class="btn btn-xs btn-primary" data-toggle="tooltip" title="" data-original-title="Chỉnh sửa thông tin"><i class="fa fa fa-edit"></i></a>

@@ -31,6 +31,12 @@
         <span class="sidebar-mini-hide">DS sinh viên BVKL</span>
     </a>
 </li>
+{{--<li>--}}
+    {{--<a class="{{ Request::is('students-department*') ? 'active' : '' }}" href="/students-department">--}}
+        {{--<i class="fa fa-group"></i>--}}
+        {{--<span class="sidebar-mini-hide">SV BVKL theo Bộ môn</span>--}}
+    {{--</a>--}}
+{{--</li>--}}
 
 <li class="nav-main-heading"><span class="sidebar-mini-hide">Khu vực thiết lập</span></li>
 <li>

@@ -85,4 +85,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/students-defense', 'Admin\DefenseController@index');
     Route::get('/add-council-student-{student_id}', 'Admin\DefenseController@get_add_council_student')->name('get_add_council_student');;
     Route::put('/add-council-student/{student_id}', 'Admin\DefenseController@add_council_student')->name('add_council_student');
+
+    Route::get('/students-department', 'Admin\StudentDepartmentController@index');
 });

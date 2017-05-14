@@ -28,6 +28,7 @@
                             <th>Tên sinh viên</th>
                             <th>Mã sinh viên</th>
                             <th>Email</th>
+                            <th>Lớp đào tạo</th>
                             <th>Hành động</th>
                         </tr>
                         </thead>
@@ -38,6 +39,7 @@
                                 <td>{{ $student->full_name }}</td>
                                 <td>{{ $student->student_id }}</td>
                                 <td>{{ $student->email or '' }}</td>
+                                <td>{{ $student->class_uet() }}</td>
                                 <td>
                                     <div class="btn-group">
                                         {{ Form::open(['method' => 'DELETE', 'route'=>['student.delete', $student->id], 'class' => 'float-left']) }}

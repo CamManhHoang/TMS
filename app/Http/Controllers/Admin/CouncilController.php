@@ -23,12 +23,16 @@ class CouncilController extends Controller
             'name' => 'required|min:6',
             'chairman' => 'required|min:6',
             'secretary' => 'required|min:6',
+            'vice_chairman' => 'required|min:6',
+            'commissary' => 'required|min:6',
         ]);
 
         $council = new Council();
         $council->council_name = $request->name;
         $council->chairman = $request->chairman;
         $council->secretary = $request->secretary;
+        $council->vice_chairman = $request->secretary;
+        $council->commissary = $request->secretary;
         $council->save();
 
         Alert::success('Thêm mới hội đồng bảo vệ khóa luận thành công!',

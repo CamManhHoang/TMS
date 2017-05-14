@@ -33,6 +33,18 @@
                                 <input class="form-control" type="text" id="secretary" name="secretary" placeholder="Gõ tên thư ký hội đồng...">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="vice_chairman">Tên phó chủ tịch HĐ <span class="text-danger">*</span></label>
+                            <div class="col-md-7">
+                                <input class="form-control" type="text" id="vice_chairman" name="vice_chairman" placeholder="Gõ tên phó chủ tịch hội đồng...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="commissary">Tên ủy viên HĐ <span class="text-danger">*</span></label>
+                            <div class="col-md-7">
+                                <input class="form-control" type="text" id="commissary" name="commissary" placeholder="Gõ tên ủy viên hội đồng...">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
